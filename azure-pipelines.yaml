@@ -33,6 +33,16 @@ steps:
     reportFile: '$(Build.ArtifactStagingDirectory)/snyk-app-report.html'
   displayName: 'Run Snyk App Scan'
 
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'crm'
+    scanPath: 'package.json'
+    format: 'XML, HTML'
+    uploadReports: true
+    warnOnCVSSViolation: true
+    enableExperimental: true
+    enableRetired: true
+
 - task: SonarCloudPrepare@3
   inputs:
     SonarCloud: 'sonar-connection'
@@ -49,3 +59,11 @@ steps:
 - task: SonarCloudPublish@3
   inputs:
     pollingTimeoutSec: '300'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker'
+    repository: 'crmrepo'
+    command: 'buildAndPush'
+    Dockerfile: 'Dockerfile'
+    tags: '$(Build.BuildNumber)'
+
