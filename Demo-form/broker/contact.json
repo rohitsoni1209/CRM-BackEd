@@ -1,0 +1,508 @@
+{
+  "formTitle": "Contacts",
+  "sections": [
+    {
+      "formTitle": "Contact Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689746571265": {
+          "name": "item-1689746571265",
+          "type": "text",
+          "placeholder": "Untitled Information",
+          "id": "SingleLine",
+          "value": "FirstName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "First Name",
+          "remove": true
+        },
+        "item-1689746574528": {
+          "id": "item-1689683999872",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1689746574528",
+          "value": "LastName",
+          "FieldName": "Single Line",
+          "label": "Last Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691687946499": {
+          "id": "item-1689746636389",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687946499",
+          "value": "Mobile",
+          "FieldName": "Phone",
+          "label": "Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689746668689": {
+          "id": "item-1689746668689",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689746668689",
+          "value": "Email",
+          "FieldName": "Email",
+          "label": "Email",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1712820071472": {
+          "id": "item-1691687398266",
+          "type": "Lookup",
+          "placeholder": "Lookup",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1712820071472",
+          "value": "AccountName",
+          "lookupModule": "Accounts",
+          "relatedListTitle": "AccountName",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Account Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712820031078": {
+          "id": "item-1691687471543",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712820031078",
+          "value": "SecondaryEmail",
+          "FieldName": "Email",
+          "label": "Secondary Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687567115": {
+          "id": "item-1691687555394",
+          "type": "checkbox",
+          "placeholder": "Checkbox",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687567115",
+          "value": "DecisionMaker",
+          "FieldName": "Checkbox",
+          "label": "Decision Maker",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "LeadSource": {
+          "id": "item-1691687916621",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Lead Source",
+          "value": "LeadSource",
+          "options": [
+            {
+              "label": "99 Acres",
+              "value": "99 Acres"
+            },
+            {
+              "label": "Cold Call",
+              "value": "Cold Call"
+            },
+            {
+              "label": "Employee Referral",
+              "value": "Employee Referral"
+            },
+            {
+              "label": "External Referral",
+              "value": "External Referral"
+            },
+            {
+              "label": "Facebook",
+              "value": "Facebook"
+            },
+            {
+              "label": "Facebook Ads",
+              "value": "Facebook Ads"
+            },
+            {
+              "label": "Whatsapp Campaigns",
+              "value": "Whatsapp Campaigns"
+            },
+            {
+              "label": "Google Ads",
+              "value": "Google Ads"
+            },
+            {
+              "label": "Google Adwords",
+              "value": "Google Adwords"
+            },
+            {
+              "label": "Inbound",
+              "value": "Inbound"
+            },
+            {
+              "label": "Instagram",
+              "value": "Instagram"
+            },
+            {
+              "label": "Linkedin",
+              "value": "Linkedin"
+            },
+            {
+              "label": "MagicBricks",
+              "value": "MagicBricks"
+            },
+            {
+              "label": "No broker",
+              "value": "No broker"
+            },
+            {
+              "label": "OLX",
+              "value": "OLX"
+            },
+            {
+              "label": "Propstack",
+              "value": "Propstack"
+            },
+            {
+              "label": "Self Sourced",
+              "value": "Self Sourced"
+            },
+            {
+              "label": "Twitter",
+              "value": "Twitter"
+            },
+            {
+              "label": "Website",
+              "value": "Website"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Lead Source",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712820115059": {
+          "id": "item-1691687815380",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712820115059",
+          "value": "Designation",
+          "FieldName": "Single Line",
+          "label": "Designation",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712820173316": {
+          "id": "item-1691687977160",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712820173316",
+          "value": "SecondaryMobile",
+          "FieldName": "Phone",
+          "label": "Secondary Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "LeadType": {
+          "id": "item-1691688122237",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Lead Type",
+          "value": "LeadType",
+          "options": [
+            {
+              "label": "Coworking/Managed",
+              "value": "Coworking/Managed"
+            },
+            {
+              "label": "Conventional",
+              "value": "Conventional"
+            },
+            {
+              "label": "Residential",
+              "value": "Residential"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Lead Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691688213904": {
+          "id": "item-1691688206283",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691688213904",
+          "value": "ReferralName",
+          "FieldName": "Single Line",
+          "label": "Referral Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691688481656": {
+          "id": "item-1691688481656",
+          "type": "Lookup",
+          "placeholder": "Channel Partner Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691688481656",
+          "value": "ChannelPartnerName",
+          "lookupModule": "channel-partner",
+          "relatedListTitle": "Channel Partner Name",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Channel Partner Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Industry": {
+          "id": "item-1691476441121",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Industry",
+          "value": "Industry",
+          "options": [
+            {
+              "label": "IT/ITeS",
+              "value": "IT/ITeS"
+            },
+            {
+              "label": "BPO/KPO",
+              "value": "BPO/KPO"
+            },
+            {
+              "label": "Manufacturing ",
+              "value": "Manufacturing "
+            },
+            {
+              "label": "Business Services",
+              "value": "Business Services"
+            },
+            {
+              "label": "Consultancies",
+              "value": "Consultancies"
+            },
+            {
+              "label": "Media/Entertainment",
+              "value": "Media/Entertainment"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Industry",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712820267504": {
+          "id": "item-1712820267504",
+          "type": "Select",
+          "placeholder": "Preferred City",
+          "duplicated": false,
+          "name": "item-1712820267504",
+          "value": "PreferredCity",
+          "options": [
+            {
+              "label": "Pune",
+              "value": "Pune"
+            },
+            {
+              "label": "Mumbai",
+              "value": "Mumbai"
+            },
+            {
+              "label": "Hyderabad",
+              "value": "Hyderabad"
+            },
+            {
+              "label": "Chennai",
+              "value": "Chennai"
+            },
+            {
+              "label": "Bengaluru",
+              "value": "Bengaluru"
+            },
+            {
+              "label": "Ahmedabad",
+              "value": "Ahmedabad"
+            },
+            {
+              "label": "Navi Mumbai",
+              "value": "Navi Mumbai"
+            },
+            {
+              "label": "Thane",
+              "value": "Thane"
+            },
+            {
+              "label": "New Delhi",
+              "value": "New Delhi"
+            },
+            {
+              "label": "Noida",
+              "value": "Noida"
+            },
+            {
+              "label": "Gurugram",
+              "value": "Gurugram"
+            },
+            {
+              "label": "Ghaziabad",
+              "value": "Ghaziabad"
+            },
+            {
+              "label": "Faridabad",
+              "value": "Faridabad"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Preferred City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557975212": {
+          "id": "item-1712557969029",
+          "type": "textarea",
+          "placeholder": "Description",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557975212",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

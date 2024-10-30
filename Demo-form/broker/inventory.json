@@ -1,0 +1,1121 @@
+{
+  "formTitle": "Inventory",
+  "sections": [
+    {
+      "formTitle": "Inventory Information",
+      "inputs": {
+        "item-1691999605496": {
+          "id": "item-1691999596940",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999605496",
+          "value": "WebsiteDisplayName",
+          "FieldName": "Single Line",
+          "label": "Website Display Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689749348188": {
+          "name": "item-1689749348188",
+          "type": "text",
+          "placeholder": "Inventory Name",
+          "id": "SingleLine",
+          "value": "InventoryName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Inventory Name",
+          "remove": true
+        },
+        "item-1691999629354": {
+          "id": "item-1691999621442",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999629354",
+          "value": "OperatorName",
+          "FieldName": "Single Line",
+          "label": "Operator Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999635564": {
+          "id": "item-1691999615762",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999635564",
+          "value": "DeveloperName",
+          "FieldName": "Single Line",
+          "label": "Developer Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "ResidentialCategory": {
+          "id": "item-1691999716160",
+          "type": "Select",
+          "placeholder": "Residential Category",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "ResidentialCategory",
+          "value": "ResidentialCategory",
+          "options": [
+            {
+              "label": "-None-",
+              "value": "-None-"
+            },
+            {
+              "label": "1RK",
+              "value": "1RK"
+            },
+            {
+              "label": "1BHK",
+              "value": "1BHK"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Residential Category",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "InventoryCategory": {
+          "id": "item-1689749465653",
+          "type": "Select",
+          "placeholder": "Inventory Category",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Inventory Category",
+          "value": "InventoryCategory",
+          "options": [
+            {
+              "label": "-None-",
+              "value": "-None-"
+            },
+            {
+              "label": "Co-Working/Managed",
+              "value": "Co-Working/Managed"
+            },
+            {
+              "label": "Conventional",
+              "value": "Conventional"
+            },
+            {
+              "label": "Retail Spaces",
+              "value": "Retail Spaces"
+            },
+            {
+              "label": "Warehouses",
+              "value": "Warehouses"
+            },
+            {
+              "label": "Residential",
+              "value": "Residential"
+            },
+            {
+              "label": "Hospital",
+              "value": "Hospital"
+            },
+            {
+              "label": "Hotel",
+              "value": "Hotel"
+            },
+            {
+              "label": "School",
+              "value": "School"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Inventory Category",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "InventoryCondition": {
+          "id": "item-1691999742990",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Inventory Condition",
+          "value": "InventoryCondition",
+          "options": [
+            {
+              "label": "Bare Shell",
+              "value": "Bare Shell"
+            },
+            {
+              "label": "Warm Shell",
+              "value": "Warm Shell"
+            },
+            {
+              "label": "Fitted Out/As is",
+              "value": "Fitted Out/As is"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Inventory Condition",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999780883": {
+          "id": "item-1691999753703",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999780883",
+          "value": "InventoryCode",
+          "FieldName": "Single Line",
+          "label": "Inventory Code",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999790337": {
+          "id": "item-1691999757290",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999790337",
+          "value": "Remarks",
+          "FieldName": "Multi Line",
+          "label": "Remarks",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999801262": {
+          "id": "item-1691999760690",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999801262",
+          "value": "InventoryFloor",
+          "FieldName": "Single Line",
+          "label": "Inventory Floor",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "InventoryStatus": {
+          "id": "item-1689749358296",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Inventory Status",
+          "value": "InventoryStatus",
+          "options": [
+            {
+              "label": "Live Property with Inventory",
+              "value": "Live Property with Inventory"
+            },
+            {
+              "label": "Not Live w/Inventory",
+              "value": "Not Live w/Inventory"
+            },
+            {
+              "label": "Live Property No Inventory",
+              "value": "Live Property No Inventory"
+            },
+            {
+              "label": "Not contacted",
+              "value": "Not contacted"
+            },
+            {
+              "label": "Interested unknown Inventory",
+              "value": "Interested unknown Inventory"
+            },
+            {
+              "label": "No Inventory",
+              "value": "No Inventory"
+            },
+            {
+              "label": "Not Interested",
+              "value": "Not Interested"
+            },
+            {
+              "label": "Blacklisted",
+              "value": "Blacklisted"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Inventory Status",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "OccupancyStatus": {
+          "id": "item-1691999943560",
+          "type": "Select",
+          "placeholder": "Occupancy Status",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "OccupancyStatus",
+          "value": "OccupancyStatus",
+          "options": [
+            {
+              "label": "Vacant",
+              "value": "Vacant"
+            },
+            {
+              "label": "Occupied",
+              "value": "Occupied"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Occupancy Status",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692000017274": {
+          "id": "item-1691999986782",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000017274",
+          "value": "InventorySourcedby",
+          "FieldName": "Single Line",
+          "label": "Inventory Sourced by",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Area Information",
+      "inputs": {
+        "item-1692000197807": {
+          "id": "item-1692000070528",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000197807",
+          "value": "CarpetSqft",
+          "FieldName": "Number",
+          "label": "Carpet(Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827345226": {
+          "id": "item-1692000064109",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827345226",
+          "value": "AvailableCapacitySeats",
+          "FieldName": "Number",
+          "label": "Available Capacity (Seats)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692000402762": {
+          "id": "item-1692000059413",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000402762",
+          "value": "ChargeableSqft",
+          "FieldName": "Number",
+          "label": "Chargeable(Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692000230042": {
+          "id": "item-1692000073350",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000230042",
+          "value": "TotalCapacitySeats",
+          "FieldName": "Number",
+          "label": "Total Capacity(Seats)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827981003": {
+          "id": "item-1692000337189",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827981003",
+          "value": "FloorPlateCarpet",
+          "FieldName": "Number",
+          "label": "Floor Plate(Carpet)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692000315829": {
+          "id": "item-1692000249706",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000315829",
+          "value": "AnyKindofAMC",
+          "FieldName": "Single Line",
+          "label": "Any Kind of AMC",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827795531": {
+          "id": "item-1712827772239",
+          "type": "textarea",
+          "placeholder": "Configuration",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827795531",
+          "value": "Configuration",
+          "FieldName": "Multi Line",
+          "label": "Configuration",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827984146": {
+          "id": "item-1692000347120",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827984146",
+          "value": "FloorPlateChargeable",
+          "FieldName": "Number",
+          "label": "Floor Plate(Chargeable)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Location Information",
+      "inputs": {
+        "item-1692000964888": {
+          "id": "item-1692000529590",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000964888",
+          "value": "BuildingName",
+          "FieldName": "Single Line",
+          "label": "Building Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "BuildingType": {
+          "id": "item-1692000551839",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Building Type",
+          "value": "BuildingType",
+          "options": [
+            {
+              "label": "IT Building",
+              "value": "IT Building"
+            },
+            {
+              "label": "Non-IT Building",
+              "value": "Non-IT Building"
+            },
+            {
+              "label": "SEZ",
+              "value": "SEZ"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Building Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "BuildingStatus": {
+          "id": "item-1692000672084",
+          "type": "Select",
+          "placeholder": "Building Status",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "BuildingStatus",
+          "value": "BuildingStatus",
+          "options": [
+            {
+              "label": "Ready",
+              "value": "Ready"
+            },
+            {
+              "label": "Under Construction",
+              "value": "Under Construction"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Building Status",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001125333": {
+          "id": "item-1692000683169",
+          "type": "date",
+          "placeholder": "Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001125333",
+          "value": "ProposedAvailability",
+          "FieldName": "Date",
+          "label": "Proposed Availability",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001152448": {
+          "id": "item-1692000834222",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001152448",
+          "value": "BuildingStructure",
+          "FieldName": "Single Line",
+          "label": "Building Structure",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001181046": {
+          "id": "item-1692000719802",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001181046",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001260439": {
+          "id": "item-1692000747909",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001260439",
+          "value": "CompleteAddress",
+          "FieldName": "Multi Line",
+          "label": "Complete Address",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692000933341": {
+          "id": "item-1692000702619",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692000933341",
+          "value": "POCName",
+          "FieldName": "Single Line",
+          "label": "POC Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001290187": {
+          "id": "item-1692000759923",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001290187",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827388982": {
+          "id": "item-1692000813461",
+          "type": "text",
+          "placeholder": "URL",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827388982",
+          "value": "WebsiteLinkProperty",
+          "FieldName": "URL",
+          "label": "Website Link Property",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001376333": {
+          "id": "item-1692001360800",
+          "type": "text",
+          "placeholder": "URL",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001376333",
+          "value": "ImagesLink",
+          "FieldName": "URL",
+          "label": "Images Link",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001450234": {
+          "id": "item-1692000826599",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692001450234",
+          "value": "Latitude",
+          "FieldName": "Single Line",
+          "label": "Latitude",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827908647": {
+          "id": "item-1692000798685",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827908647",
+          "value": "Longitude",
+          "FieldName": "Single Line",
+          "label": "Longitude",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Contact Information",
+      "inputs": {
+        "item-1692002389769": {
+          "id": "item-1692002269239",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692002389769",
+          "value": "OwnerName",
+          "FieldName": "Single Line",
+          "label": "Owner Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692002381595": {
+          "id": "item-1692002252850",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692002381595",
+          "value": "POCName",
+          "FieldName": "Single Line",
+          "label": "POC Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712828122565": {
+          "id": "item-1692002307940",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712828122565",
+          "value": "OwnerMobile",
+          "FieldName": "Phone",
+          "label": "Owner Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692002406254": {
+          "id": "item-1692002335603",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692002406254",
+          "value": "POCMobile",
+          "FieldName": "Phone",
+          "label": "POC Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692002431318": {
+          "id": "item-1692002352223",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692002431318",
+          "value": "OwnerEmail",
+          "FieldName": "Email",
+          "label": "Owner Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692002435122": {
+          "id": "item-1692002345728",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692002435122",
+          "value": "POCEmail",
+          "FieldName": "Email",
+          "label": "POC Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692004429544": {
+          "id": "item-1692002321103",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692004429544",
+          "value": "TenantPOCMobile",
+          "FieldName": "Phone",
+          "label": "Tenant POC Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692004388261": {
+          "id": "item-1692002242974",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692004388261",
+          "value": "TenantComapny",
+          "FieldName": "Single Line",
+          "label": "Tenant Comapny",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692004552474": {
+          "id": "item-1692002261986",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692004552474",
+          "value": "TenantPOCName",
+          "FieldName": "Single Line",
+          "label": "Tenant POC Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692004557813": {
+          "id": "item-1692004545347",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692004557813",
+          "value": "TenantPOCEmail",
+          "FieldName": "Email",
+          "label": "Tenant POC Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827447775": {
+          "id": "item-1712827447775",
+          "type": "Multiselect",
+          "placeholder": "Multiselect",
+          "duplicated": false,
+          "name": "item-1712827447775",
+          "value": "Amenities",
+          "options": [
+            {
+              "label": "24/7 Security",
+              "value": "24/7 Security"
+            },
+            {
+              "label": "Printing Facility",
+              "value": "Printing Facility"
+            },
+            {
+              "label": "Passenger Lifts",
+              "value": "Passenger Lifts"
+            },
+            {
+              "label": "24/7 Office Access",
+              "value": "24/7 Office Access"
+            },
+            {
+              "label": "Cafeteria",
+              "value": "Cafeteria"
+            },
+            {
+              "label": "Server Room",
+              "value": "Server Room"
+            },
+            {
+              "label": "Window Coverings",
+              "value": "Window Coverings"
+            },
+            {
+              "label": "Support Staff",
+              "value": "Support Staff"
+            },
+            {
+              "label": "Managed Reception",
+              "value": "Managed Reception"
+            },
+            {
+              "label": "Prime Locations",
+              "value": "Prime Locations"
+            },
+            {
+              "label": "WIFI",
+              "value": "WIFI"
+            },
+            {
+              "label": "Drinking Water",
+              "value": "Drinking Water"
+            },
+            {
+              "label": "Cubicle",
+              "value": "Cubicle"
+            },
+            {
+              "label": "Conference Room",
+              "value": "Conference Room"
+            },
+            {
+              "label": "Beverages",
+              "value": "Beverages"
+            },
+            {
+              "label": "CCTV Surveillance",
+              "value": "CCTV Surveillance"
+            },
+            {
+              "label": "Car Parking",
+              "value": "Car Parking"
+            },
+            {
+              "label": "Bike Parking",
+              "value": "Bike Parking"
+            },
+            {
+              "label": "Meeting Room",
+              "value": "Meeting Room"
+            },
+            {
+              "label": "Air Conditioning",
+              "value": "Air Conditioning"
+            }
+          ],
+          "required": false,
+          "FieldName": "Multiselect",
+          "label": "Amenities",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Price Information",
+      "inputs": {
+        "item-1712827650573": {
+          "id": "item-1692004693058",
+          "type": "number",
+          "placeholder": "Commercials (INR/Seat)",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827650573",
+          "value": "CommercialsINRSeat",
+          "FieldName": "Currency",
+          "label": "Commercials (INR/Seat)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827304232": {
+          "id": "item-1692004735715",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827304232",
+          "value": "CommercialsINRChargeableSqft",
+          "FieldName": "Currency",
+          "label": "Commercials (INR/Chargeable Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692007517062": {
+          "id": "item-1692004680798",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692007517062",
+          "value": "CAMINRCarpetSqft",
+          "FieldName": "Currency",
+          "label": "CAM(INR/Carpet Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692007964042": {
+          "id": "item-1692007828201",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692007964042",
+          "value": "LockinPeriodMonth",
+          "FieldName": "Single Line",
+          "label": "Lock-in-Period(Month)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827331575": {
+          "id": "item-1692004752689",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827331575",
+          "value": "CAMINRChargeableSqft",
+          "FieldName": "Currency",
+          "label": "CAM (INR/Chargeable Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692007848777": {
+          "id": "item-1692004775715",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692007848777",
+          "value": "SecurityDepositMonth",
+          "FieldName": "Single Line",
+          "label": "Security Deposit(Month)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712827659924": {
+          "id": "item-1692004701425",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712827659924",
+          "value": "CommercialsINRCarpet",
+          "FieldName": "Currency",
+          "label": "Commercials(INR/Carpet)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692007752075": {
+          "id": "item-1692004797446",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692007752075",
+          "value": "CommissionStruture",
+          "FieldName": "Multi Line",
+          "label": "Commission Struture",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692007532366": {
+          "id": "item-1692004714991",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692007532366",
+          "value": "ClosingRate",
+          "FieldName": "Currency",
+          "label": "Closing Rate",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information",
+      "inputs": {
+        "item-1692014896859": {
+          "id": "item-1692014872333",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692014896859",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692014906952": {
+          "id": "item-1692014860830",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692014906952",
+          "value": "KeyBenifits",
+          "FieldName": "Multi Line",
+          "label": "Key Benifits",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692014923679": {
+          "id": "item-1692014879757",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692014923679",
+          "value": "RejectthisFor",
+          "FieldName": "Multi Line",
+          "label": "Reject this For",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

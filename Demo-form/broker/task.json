@@ -1,0 +1,274 @@
+{
+  "formTitle": "Tasks",
+  "sections": [
+    {
+      "formTitle": "Tasks Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689748650541": {
+          "name": "item-1689748650541",
+          "type": "text",
+          "placeholder": "Subject",
+          "id": "SingleLine",
+          "value": "Subject",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Subject",
+          "remove": true
+        },
+        "item-1689748847629": {
+          "id": "item-1689748843537",
+          "type": "date",
+          "placeholder": "Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748847629",
+          "value": "DueDate",
+          "FieldName": "Date",
+          "label": "Due Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1692875114533": {
+          "id": "item-1692875105735",
+          "type": "Lookup",
+          "placeholder": "Task to",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875114533",
+          "value": "ContactName",
+          "lookupModule": "Contacts",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Task to",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691740125316": {
+          "id": "item-1691740125316",
+          "type": "Lookup",
+          "placeholder": "Related To",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691740125316",
+          "value": "RelatedTo",
+          "lookupModule": "Leads",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Related To",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Status": {
+          "id": "item-1691740142511",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Status",
+          "value": "Status",
+          "options": [
+            {
+              "label": "Not Started",
+              "value": "Not Started"
+            },
+            {
+              "label": "Deferred",
+              "value": "Deferred"
+            },
+            {
+              "label": "In Progress",
+              "value": "In Progress"
+            },
+            {
+              "label": "Completed",
+              "value": "Completed"
+            },
+            {
+              "label": "Waiting for input",
+              "value": "Waiting for input"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Status",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Priority": {
+          "id": "item-1691740168990",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Priority",
+          "value": "Priority",
+          "options": [
+            {
+              "label": "Highest",
+              "value": "Highest"
+            },
+            {
+              "label": "High",
+              "value": "High"
+            },
+            {
+              "label": "Medium",
+              "value": "Medium"
+            },
+            {
+              "label": "Low",
+              "value": "Low"
+            },
+            {
+              "label": "Lowest",
+              "value": "Lowest"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Priority",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689748865361": {
+          "id": "item-1689748859222",
+          "type": "datetime-local",
+          "placeholder": "Date/Time",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748865361",
+          "value": "ClosedTime",
+          "FieldName": "Date/Time",
+          "label": "Closed Time",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information",
+      "inputs": {
+        "item-1691740270407": {
+          "id": "item-1691740259980",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691740270407",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

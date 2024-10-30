@@ -1,0 +1,796 @@
+{
+  "formTitle": "Opportunities",
+  "sections": [
+    {
+      "formTitle": "Opportunities Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689747693934": {
+          "id": "item-1689747693934",
+          "type": "text",
+          "placeholder": "Opportunity Name",
+          "maxLength": "255",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1689747693934",
+          "value": "OpportunityName",
+          "FieldName": "Single Line",
+          "label": "Opportunity Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true,
+          "quickCreate": false
+        },
+        "item-1692875114533": {
+          "id": "item-1692875114533",
+          "type": "Lookup",
+          "placeholder": "Contact Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875114533",
+          "value": "ContactName",
+          "lookupModule": "Contacts",
+          "relatedListTitle": "Related List Name 1",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Contact Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1692875095152": {
+          "id": "item-1692875095152",
+          "type": "Lookup",
+          "placeholder": "Account Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875095152",
+          "value": "AccountName",
+          "lookupModule": "Accounts",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Account Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1714039739957": {
+          "id": "item-1714039739957",
+          "type": "text",
+          "placeholder": "Contact PAN",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1714039739957",
+          "value": "ContactPAN",
+          "FieldName": "Single Line",
+          "label": "Contact PAN",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Pipeline": {
+          "id": "item-1689747761717",
+          "type": "Select",
+          "placeholder": "Pipeline",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Pipeline",
+          "value": "Pipeline",
+          "options": [
+            {
+              "label": "Standard",
+              "value": "1"
+            }
+          ],
+          "required": true,
+          "FieldName": "Pipeline",
+          "label": "Pipeline",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true,
+          "permisstion": [
+            {
+              "roleId": "64ccb694d7c2d856f7ea3440",
+              "access": [
+                "Add",
+                "Delete",
+                "Edit",
+                "Read"
+              ]
+            }
+          ],
+          "quickCreate": false
+        },
+        "item-1714039755516": {
+          "id": "item-1714039755516",
+          "type": "text",
+          "placeholder": "Company PAN",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1714039755516",
+          "value": "CompanyPAN",
+          "FieldName": "Single Line",
+          "label": "Company PAN",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Stage": {
+          "id": "item-1689747761716",
+          "type": "Select",
+          "placeholder": "Stage",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Stage",
+          "value": "Stage",
+          "options": [
+            {
+              "label": "Qualification",
+              "value": "Qualification"
+            },
+            {
+              "label": "Identify Decision Makers",
+              "value": "Identify Decision Makers"
+            },
+            {
+              "label": "Negotiation/Review",
+              "value": "Negotiation/Review"
+            },
+            {
+              "label": "Closed/Won",
+              "value": "Closed/Won"
+            },
+            {
+              "label": "Closed/Lost",
+              "value": "Closed/Lost"
+            },
+            {
+              "label": "Handover to Facilities",
+              "value": "Handover to Facilities"
+            },
+            {
+              "label": "Go-Live",
+              "value": "Go-Live"
+            },
+            {
+              "label": "Brokerage Pending",
+              "value": "Brokerage Pending"
+            },
+            {
+              "label": "Invoice Submitted",
+              "value": "Invoice Submitted"
+            }
+          ],
+          "required": true,
+          "FieldName": "Stage",
+          "label": "Stage",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true,
+          "permisstion": [
+            {
+              "roleId": "64ccb694d7c2d856f7ea3440",
+              "access": [
+                "Add",
+                "Edit",
+                "Delete",
+                "Read"
+              ]
+            }
+          ],
+          "quickCreate": false
+        },
+        "item-1712560012340": {
+          "id": "item-1712560012340",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "duplicated": false,
+          "name": "item-1712560012340",
+          "value": "OpportunityType",
+          "options": [
+            {
+              "label": "New Business",
+              "value": "New Business"
+            },
+            {
+              "label": "Renewal",
+              "value": "Renewal"
+            },
+            {
+              "label": "Expansion",
+              "value": "Expansion"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Opportunity Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "LeadSource": {
+          "id": "item-1691685185826",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Lead Source",
+          "value": "Lead Source",
+          "options": [
+            {
+              "label": "Cold Call",
+              "value": "Cold Call"
+            },
+            {
+              "label": "Employee Referral",
+              "value": "Employee Referral"
+            },
+            {
+              "label": "External Referral",
+              "value": "External Referral"
+            },
+            {
+              "label": "Facebook",
+              "value": "Facebook"
+            },
+            {
+              "label": "Facebook Ads",
+              "value": "Facebook Ads"
+            },
+            {
+              "label": "Whatsapp Campaigns",
+              "value": "Whatsapp Campaigns"
+            },
+            {
+              "label": "Google Ads",
+              "value": "Google Ads"
+            },
+            {
+              "label": "Google Adwords",
+              "value": "Google Adwords"
+            },
+            {
+              "label": "Inbound",
+              "value": "Inbound"
+            },
+            {
+              "label": "Instagram",
+              "value": "Instagram"
+            },
+            {
+              "label": "Self Sourced",
+              "value": "Self Sourced"
+            },
+            {
+              "label": "Twitter",
+              "value": "Twitter"
+            },
+            {
+              "label": "Website",
+              "value": "Website"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Lead Source",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685302394": {
+          "id": "item-1691685302394",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691685302394",
+          "value": "Mobile",
+          "FieldName": "Phone",
+          "label": "Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685575039": {
+          "id": "item-1691685575039",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691685575039",
+          "value": "Email",
+          "FieldName": "Email",
+          "label": "Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560140687": {
+          "id": "item-1712560140687",
+          "type": "number",
+          "placeholder": "Phone",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560140687",
+          "value": "SecondaryMobile",
+          "FieldName": "Phone",
+          "label": "Secondary Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560133983": {
+          "id": "item-1712560133983",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560133983",
+          "value": "SecondaryEmail",
+          "FieldName": "Email",
+          "label": "Secondary Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685390759": {
+          "id": "item-1691685390759",
+          "type": "Lookup",
+          "placeholder": "LOI Subject",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691685390759",
+          "value": "LOISubject",
+          "lookupModule": "quotes",
+          "relatedListTitle": "LOI Subject",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "LOI Subject",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685472780": {
+          "id": "item-1691685472780",
+          "type": "checkbox",
+          "placeholder": "Decision Maker",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691685472780",
+          "value": "DecisionMaker",
+          "FieldName": "Checkbox",
+          "label": "Decision Maker",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Industry": {
+          "id": "item-1691685450488",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Industry",
+          "value": "Industry",
+          "options": [
+            {
+              "label": "IT/ITeS",
+              "value": "IT/ITeS"
+            },
+            {
+              "label": "BPO/KPO",
+              "value": "BPO/KPO"
+            },
+            {
+              "label": "Manufacturing ",
+              "value": "Manufacturing "
+            },
+            {
+              "label": "Business Services",
+              "value": "Business Services"
+            },
+            {
+              "label": "Consultancies",
+              "value": "Consultancies"
+            },
+            {
+              "label": "Media/Entertainment",
+              "value": "Media/Entertainment"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Industry",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560074558": {
+          "id": "item-1712560074558",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560074558",
+          "value": "Designation",
+          "FieldName": "Single Line",
+          "label": "Designation",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685628048": {
+          "id": "item-1691685628048",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691685628048",
+          "value": "ReferralName",
+          "FieldName": "Single Line",
+          "label": "Referral Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691685700860": {
+          "id": "item-1691685700860",
+          "type": "Lookup",
+          "placeholder": "Channel Partner Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691685700860",
+          "value": "ChannelPartnerName",
+          "lookupModule": "channel-partner",
+          "relatedListTitle": "Channel Partner Name",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Channel Partner Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560349063": {
+          "id": "item-1712560349063",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560349063",
+          "value": "CompanyRegisteredAddress",
+          "FieldName": "Multi Line",
+          "label": "Company Registered Address",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560389632": {
+          "id": "item-1712560389632",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560389632",
+          "value": "CPBrokerage",
+          "FieldName": "Single Line",
+          "label": "CP Brokerage (%)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712569895409": {
+          "id": "item-1712569895409",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "duplicated": false,
+          "name": "item-1712569895409",
+          "value": "Lead Type",
+          "options": [
+            {
+              "label": "Coworking",
+              "value": "Coworking"
+            },
+            {
+              "label": "Managed",
+              "value": "Managed"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Lead Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689747708190": {
+          "id": "item-1689747708190",
+          "type": "date",
+          "placeholder": "Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689747708190",
+          "value": "ExpectedClosingDate",
+          "FieldName": "Date",
+          "label": "Expected Closing Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true,
+          "quickCreate": true
+        }
+      }
+    },
+    {
+      "formTitle": "Requirement Information",
+      "inputs": {
+        "item-1712560261579": {
+          "id": "item-1712560261579",
+          "type": "number",
+          "placeholder": "Total Seats Required",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560261579",
+          "value": "TotalSeatsRequired",
+          "FieldName": "Number",
+          "label": "Total Seats Required",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560241197": {
+          "id": "item-1712560241197",
+          "type": "number",
+          "placeholder": "Open Desks",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560241197",
+          "value": "OpenDesks",
+          "FieldName": "Number",
+          "label": "Open Desks",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560533471": {
+          "id": "item-1712560533471",
+          "type": "number",
+          "placeholder": "Manager Cabins (seats)",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560533471",
+          "value": "ManagerCabinsseats",
+          "FieldName": "Number",
+          "label": "Manager Cabins (seats)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560272101": {
+          "id": "item-1712560272101",
+          "type": "number",
+          "placeholder": "Budget per Seat",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560272101",
+          "value": "BudgetperSeat",
+          "FieldName": "Currency",
+          "label": "Budget per Seat",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560280235": {
+          "id": "item-1712560280235",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560280235",
+          "value": "MonthlyRent",
+          "FieldName": "Currency",
+          "label": "Monthly Rent",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560619086": {
+          "id": "item-1712560619086",
+          "type": "number",
+          "placeholder": "Currency",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560619086",
+          "value": "Deposit",
+          "FieldName": "Currency",
+          "label": "Deposit",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1712560668903": {
+          "id": "item-1712560668903",
+          "type": "number",
+          "placeholder": "Lock-in Period (Months)",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560668903",
+          "value": "LockinPeriodMonths",
+          "FieldName": "Number",
+          "label": "Lock-in Period (Months)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560676531": {
+          "id": "item-1712560676531",
+          "type": "number",
+          "placeholder": "Number",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560676531",
+          "value": "TenureMonths",
+          "FieldName": "Number",
+          "label": "Tenure (Months)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1714039687512": {
+          "id": "item-1714039687512",
+          "type": "textarea",
+          "placeholder": "Description",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1714039687512",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Closure Information",
+      "inputs": {
+        "item-1691685647302": {
+          "id": "item-1691685647302",
+          "type": "date",
+          "placeholder": "Actual Closure Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691685647302",
+          "value": "ActualClosureDate",
+          "FieldName": "Email",
+          "label": "Actual Closure Date",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712570053405": {
+          "id": "item-1712570053405",
+          "type": "date",
+          "placeholder": "Expected Go-Live Date",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712570053405",
+          "value": "ExpectedGoLiveDate",
+          "FieldName": "Date",
+          "label": "Expected Go-Live Date",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560897674": {
+          "id": "item-1712560897674",
+          "type": "checkbox",
+          "placeholder": "Checkbox",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560897674",
+          "value": "CustomizationRequired",
+          "FieldName": "Checkbox",
+          "label": "Customization Required",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712560905114": {
+          "id": "item-1712560905114",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712560905114",
+          "value": "CustomizationDetails",
+          "FieldName": "Multi Line",
+          "label": "Customization Details",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

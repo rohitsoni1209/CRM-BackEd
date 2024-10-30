@@ -1,0 +1,266 @@
+{
+  "formTitle": "siteVisit",
+  "sections": [
+    {
+      "formTitle": "Site Visit Information",
+      "inputs": {
+        "item-1689748932011": {
+          "name": "item-1689748932011",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689748933204": {
+          "name": "item-1689748933204",
+          "type": "text",
+          "placeholder": "Subject",
+          "id": "SingleLine",
+          "value": "Subject",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Subject",
+          "remove": true
+        },
+        "item-1712557111882": {
+          "id": "item-1712557811180",
+          "type": "text",
+          "placeholder": "Location",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557111882",
+          "value": "Location",
+          "FieldName": "Single Line",
+          "label": "Location",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691994123245": {
+          "id": "item-1691994123245",
+          "type": "text",
+          "placeholder": "Participants",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1691994123245",
+          "value": "Participants",
+          "FieldName": "Single Line",
+          "label": "Participants",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691994123241": {
+          "id": "item-1691994123241",
+          "type": "Lookup",
+          "placeholder": "Related To",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691994123241",
+          "value": "RelatedTo",
+          "lookupModule": "deals",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Related To",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689748961726": {
+          "id": "item-1689748961726",
+          "type": "datetime-local",
+          "placeholder": "Site Visit Start Time",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748961726",
+          "value": "SiteVisitStartTime",
+          "FieldName": "Date/Time",
+          "label": "Site Visit Start Time",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689748961725": {
+          "id": "item-1689748959352",
+          "type": "datetime-local",
+          "placeholder": "Site Visit End Time",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748961725",
+          "value": "SiteVisitEndTime",
+          "FieldName": "Date/Time",
+          "label": "Site Visit End Time",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691994145186": {
+          "name": "item-1691994145186",
+          "type": "Owner",
+          "placeholder": "Host",
+          "id": "Host",
+          "value": "Host",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Host",
+          "label": "Host",
+          "remove": true
+        },
+        "item-1691993773241": {
+          "id": "item-169523123241",
+          "type": "Lookup",
+          "placeholder": "Proposed Inventory",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691993773241",
+          "value": "ProposedInventory",
+          "lookupModule": "inventory",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Proposed Inventory",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689748987004": {
+          "name": "item-1689748987004",
+          "type": "text",
+          "placeholder": "Tag",
+          "id": "SingleLine",
+          "value": "Tag",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Tag",
+          "remove": true
+        }
+      }
+    },
+    {
+      "formTitle": "Meeting Additional Information",
+      "inputs": {
+        "item-1691994591726": {
+          "id": "item-1691994574749",
+          "type": "textarea",
+          "placeholder": "Description",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691994591726",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557111882": {
+          "id": "item-1712557811180",
+          "type": "text",
+          "placeholder": "Location",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557111882",
+          "value": "Location",
+          "FieldName": "Single Line",
+          "label": "Location",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

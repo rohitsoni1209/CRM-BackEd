@@ -1,0 +1,65 @@
+{
+  "formTitle": "Note",
+  "sections": [
+    {
+      "formTitle": "Note Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1712827216977": {
+          "name": "item-1712827216977",
+          "type": "text",
+          "placeholder": "Note Title",
+          "id": "SingleLine",
+          "value": "NoteTitle",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Note Title",
+          "remove": true
+        },
+        "item-1712827234650": {
+          "id": "item-1712827232351",
+          "type": "textarea",
+          "placeholder": "Note Content",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1712827234650",
+          "value": "NoteContent",
+          "FieldName": "Multi Line",
+          "label": "Note Content",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691740125316": {
+          "id": "item-1691740125316",
+          "type": "Lookup",
+          "placeholder": "Related To",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691740125316",
+          "value": "RelatedTo",
+          "lookupModule": "Leads",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Related To",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

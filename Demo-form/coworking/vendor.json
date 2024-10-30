@@ -1,0 +1,385 @@
+{
+  "formTitle": "Vendor",
+  "sections": [
+    {
+      "formTitle": "Vendor Information",
+      "inputs": {
+        "item-1691995444246": {
+          "name": "item-1691995444246",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1691995553183": {
+          "name": "item-1691995553183",
+          "type": "text",
+          "placeholder": "Untitled Information",
+          "id": "SingleLine",
+          "value": "VendorName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Vendor Name",
+          "remove": true
+        },
+        "item-1691995577935": {
+          "id": "item-1691995577935",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691995577935",
+          "value": "Phone",
+          "FieldName": "Phone",
+          "label": "Phone",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691995644044": {
+          "id": "item-1691995583839",
+          "type": "email",
+          "placeholder": "Email",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691995644044",
+          "value": "Email",
+          "FieldName": "Email",
+          "label": "Email",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691995652330": {
+          "id": "item-1691995591120",
+          "type": "text",
+          "placeholder": "URL",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691995652330",
+          "value": "Website",
+          "FieldName": "URL",
+          "label": "Website",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691995681817": {
+          "id": "item-1691995665319",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691995681817",
+          "value": "GSTNo",
+          "FieldName": "Single Line",
+          "label": "GST No",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691995711752": {
+          "id": "item-1691995707719",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691995711752",
+          "value": "PAN",
+          "FieldName": "Single Line",
+          "label": "PAN",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691995731149": {
+          "id": "item-1691995731149",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691995731149",
+          "value": "VendorType",
+          "options": [
+            {
+              "label": "Option 1",
+              "value": "1"
+            },
+            {
+              "label": "Option 2",
+              "value": "2"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Vendor Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Bill to Information",
+      "inputs": {
+        "item-1691999014660": {
+          "id": "item-1691999007045",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999014660",
+          "value": "Bill",
+          "FieldName": "Multi Line",
+          "label": "Bill",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999054438": {
+          "id": "item-1691999029328",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999054438",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999062021": {
+          "id": "item-1691999040907",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999062021",
+          "value": "Street",
+          "FieldName": "Single Line",
+          "label": "Street",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999089733": {
+          "id": "item-1691999045852",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999089733",
+          "value": "ZipCode",
+          "FieldName": "Single Line",
+          "label": "Zip Code",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691999082490": {
+          "id": "item-1691999036246",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691999082490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Account Information",
+      "inputs": {
+        "item-1691998846809": {
+          "id": "item-1691998796117",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691998846809",
+          "value": "BankA/CName",
+          "FieldName": "Single Line",
+          "label": "Bank A/C Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691998856196": {
+          "id": "item-1691998810840",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691998856196",
+          "value": "BranchName",
+          "FieldName": "Single Line",
+          "label": "Branch Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691998900838": {
+          "id": "item-1691998818386",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691998900838",
+          "value": "A/CNumber",
+          "FieldName": "Single Line",
+          "label": "A/C Number",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691998863285": {
+          "id": "item-1691998834406",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691998863285",
+          "value": "BankName",
+          "FieldName": "Single Line",
+          "label": "Bank Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691998906767": {
+          "id": "item-1691998825336",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691998906767",
+          "value": "IFDCCode",
+          "FieldName": "Single Line",
+          "label": "IFDC Code",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information",
+      "inputs": {
+        "item-1692187777697": {
+          "id": "item-1692187768193",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1692187777697",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

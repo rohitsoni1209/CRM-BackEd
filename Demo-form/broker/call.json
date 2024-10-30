@@ -1,0 +1,384 @@
+{
+  "formTitle": "Calls",
+  "sections": [
+    {
+      "formTitle": "Call Information",
+      "inputs": {
+        "item-1691740436761": {
+          "name": "item-1691740436761",
+          "type": "Owner",
+          "placeholder": "Owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1692875114533": {
+          "id": "item-1692875105735",
+          "type": "Lookup",
+          "placeholder": "Call to",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875114533",
+          "value": "ContactName",
+          "lookupModule": "Contacts",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Call to",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691740336683": {
+          "id": "item-1691740336683",
+          "type": "Lookup",
+          "placeholder": "Related To",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691740336683",
+          "value": "RelatedTo",
+          "lookupModule": "Leads",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Related To",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689748567347": {
+          "id": "item-1689748564044",
+          "type": "text",
+          "placeholder": "Subject",
+          "maxLength": "255",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1689748567347",
+          "value": "Subject",
+          "FieldName": "Single Line",
+          "label": "Subject",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "Outgoing Call Status": {
+          "id": "item-1691740387691",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Outgoing Call Status",
+          "value": "OutgoingCallStatus",
+          "options": [
+            {
+              "label": "Scheduled",
+              "value": "Scheduled"
+            },
+            {
+              "label": "Completed",
+              "value": "Completed"
+            },
+            {
+              "label": "Overdue",
+              "value": "Overdue"
+            },
+            {
+              "label": "Cancelled",
+              "value": "Cancelled"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Outgoing Call Status",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "Call Type": {
+          "id": "item-1691740364342",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Call Type",
+          "value": "CallType",
+          "options": [
+            {
+              "label": "Outbound",
+              "value": "Outbound"
+            },
+            {
+              "label": "Inbound",
+              "value": "Inbound"
+            },
+            {
+              "label": "Missed",
+              "value": "Missed"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Call Type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689733322680": {
+          "id": "item-1689733322680",
+          "type": "datetime-local",
+          "placeholder": "Call Start Time",
+          "maxLength": "255",
+          "required": true,
+          "duplicated": false,
+          "name": "item-1689748511680",
+          "value": "CallStartTime",
+          "FieldName": "Date/Time",
+          "label": "Call Start Time",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689748542680": {
+          "id": "item-1689748541057",
+          "type": "datetime-local",
+          "placeholder": "Date/Time",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748542680",
+          "value": "CallEndTime",
+          "FieldName": "Date/Time",
+          "label": "Call End Time",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689748557418": {
+          "id": "item-1689748547660",
+          "type": "number",
+          "placeholder": "Number",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748557418",
+          "value": "CallDuration",
+          "FieldName": "Number",
+          "label": "Call Duration",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691740503641": {
+          "id": "item-1691740494717",
+          "type": "text",
+          "placeholder": "URL",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691740503641",
+          "value": "VoiceRecording",
+          "FieldName": "URL",
+          "label": "Voice Recording",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Purpose of Outgoing Call",
+      "inputs": {
+        "Call Purpose": {
+          "id": "item-1691740617775",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Call Purpose",
+          "value": "CallPurpose",
+          "options": [
+            {
+              "label": "Prospecting",
+              "value": "Prospecting"
+            },
+            {
+              "label": "Administrative",
+              "value": "Administrative"
+            },
+            {
+              "label": "Negotiation",
+              "value": "Negotiation"
+            },
+            {
+              "label": "Demo",
+              "value": "Demo"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Call Purpose",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691740709758": {
+          "id": "item-1691740699794",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691740709758",
+          "value": "CallAgenda",
+          "FieldName": "Single Line",
+          "label": "Call Agenda",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Outcome of Outgoing Call",
+      "inputs": {
+        "Call Result": {
+          "id": "item-1691740638930",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "Call Result",
+          "value": "CallResult",
+          "options": [
+            {
+              "label": "Interested",
+              "value": "Interested"
+            },
+            {
+              "label": "Not interested",
+              "value": "Not interested"
+            },
+            {
+              "label": "No response/Busy",
+              "value": "No response/Busy"
+            },
+            {
+              "label": "Requested more info",
+              "value": "Requested more info"
+            },
+            {
+              "label": "Requested call back",
+              "value": "Requested call back"
+            },
+            {
+              "label": "Invalid number",
+              "value": "Invalid number"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Call Result",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691740679416": {
+          "id": "item-1691740665082",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691740679416",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

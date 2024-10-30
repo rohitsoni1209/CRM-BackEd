@@ -1,0 +1,1016 @@
+{
+  "formTitle": "Inventory",
+  "sections": [
+    {
+      "formTitle": "Inventory Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1689749348222": {
+          "name": "item-1689749348222",
+          "type": "text",
+          "placeholder": "Inventory Name",
+          "id": "SingleLine",
+          "value": "InventoryName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Inventory Name",
+          "remove": true
+        },
+        "item-1714128032929": {
+          "id": "item-1714128032129",
+          "type": "Lookup",
+          "placeholder": "Centre Name",
+          "duplicated": false,
+          "name": "item-1714128032929",
+          "value": "CentreName",
+          "lookupModule": "deals",
+          "relatedListTitle": "centre",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Centre Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "quickCreate": false
+        },
+        "item-17141283022929": {
+          "id": "item-1714128321119",
+          "type": "Lookup",
+          "placeholder": "Occupant Name",
+          "duplicated": false,
+          "name": "item-17141283022929",
+          "value": "OccupantName",
+          "lookupModule": "accounts",
+          "relatedListTitle": "accounts",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Occupant Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "quickCreate": false
+        },
+        "item-17141220442929": {
+          "id": "item-1714129321119",
+          "type": "Lookup",
+          "placeholder": "Agreement Subject",
+          "duplicated": false,
+          "name": "item-17141220442929",
+          "value": "AgreementSubject",
+          "lookupModule": "sale-orders",
+          "relatedListTitle": "sale-orders",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Agreement Subject",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "quickCreate": false
+        },
+        "item-1692001435549": {
+          "id": "item-169936130749",
+          "type": "Select",
+          "placeholder": "Centre type",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692001435549",
+          "value": "Centretype",
+          "options": [
+            {
+              "label": "Business Centre",
+              "value": "Business Centre"
+            },
+            {
+              "label": "Entreprise",
+              "value": "Entreprise"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Centre type",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689749349222": {
+          "name": "item-1689749349222",
+          "type": "text",
+          "placeholder": "Building Name",
+          "id": "SingleLine",
+          "value": "BuildingName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Building Name",
+          "remove": true
+        },
+        "item-1689749350222": {
+          "name": "item-1689749350222",
+          "type": "text",
+          "placeholder": "Address",
+          "id": "SingleLine",
+          "value": "Address",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Address",
+          "remove": true
+        },
+        "item-1689749351222": {
+          "name": "item-1689749351222",
+          "type": "text",
+          "placeholder": "Workstation Size",
+          "id": "SingleLine",
+          "value": "WorkstationSize",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Workstation Size",
+          "remove": true
+        },
+        "item-1689749352222": {
+          "name": "item-1689749352222",
+          "type": "text",
+          "placeholder": "Male WC",
+          "id": "SingleLine",
+          "value": "MaleWC",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Male WC",
+          "remove": true
+        },
+        "item-1689749353222": {
+          "name": "item-1689749353222",
+          "type": "text",
+          "placeholder": "Male Urinals",
+          "id": "SingleLine",
+          "value": "MaleUrinals",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Male Urinals",
+          "remove": true
+        },
+        "item-1689749354222": {
+          "name": "item-1689749354222",
+          "type": "text",
+          "placeholder": "Female WC",
+          "id": "SingleLine",
+          "value": "FemaleWC",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Female WC",
+          "remove": true
+        },
+        "item-1689749355222": {
+          "name": "item-1689749355222",
+          "type": "text",
+          "placeholder": "Security Manager",
+          "id": "SingleLine",
+          "value": "SecurityManager",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Security Manager",
+          "remove": true
+        },
+        "item-1689749356222": {
+          "name": "item-1689749356222",
+          "type": "text",
+          "placeholder": "Reception Desk",
+          "id": "SingleLine",
+          "value": "ReceptionDesk",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Reception Desk",
+          "remove": true
+        },
+        "item-1689749357222": {
+          "name": "item-1689749357222",
+          "type": "text",
+          "placeholder": "Community Manager",
+          "id": "SingleLine",
+          "value": "CommunityManager",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Community Manager",
+          "remove": true
+        },
+        "item-1689749358222": {
+          "name": "item-1689749358222",
+          "type": "text",
+          "placeholder": "Sales Manager",
+          "id": "SingleLine",
+          "value": "SalesManager",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Sales Manager",
+          "remove": true
+        },
+        "item-1689749359222": {
+          "name": "item-1689749359222",
+          "type": "text",
+          "placeholder": "Senior Sales Manager",
+          "id": "SingleLine",
+          "value": "SeniorSalesManager",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Senior Sales Manager",
+          "remove": true
+        },
+        "item-1691687032499": {
+          "id": "item-16916872216499",
+          "type": "number",
+          "placeholder": "Landline Number",
+          "maxLength": "20",
+          "min": "6",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687032499",
+          "value": "LandlineNumber",
+          "FieldName": "Phone",
+          "label": "LandlineNumber",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-169168793190499": {
+          "id": "item-1691211946499",
+          "type": "number",
+          "placeholder": "Security Contact",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-169168793190499",
+          "value": "SecurityContact",
+          "FieldName": "Phone",
+          "label": "Security Contact",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-16916212246499": {
+          "id": "item-16916840116499",
+          "type": "number",
+          "placeholder": "Reception Contact",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-16916212246499",
+          "value": "ReceptionContact",
+          "FieldName": "Phone",
+          "label": "Reception Contact",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-16916879403229": {
+          "id": "item-1691687946211",
+          "type": "number",
+          "placeholder": "Community Manager Contact",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-16916879403229",
+          "value": "CommunityManagerContact",
+          "FieldName": "Phone",
+          "label": "Community Manager Contact",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-16916820116499": {
+          "id": "item-1691687943219",
+          "type": "number",
+          "placeholder": "Sales Manager Contact",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-16916820116499",
+          "value": "SalesManagerContact",
+          "FieldName": "Phone",
+          "label": "Sales Manager Contact",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691651146499": {
+          "id": "item-16916870210499",
+          "type": "number",
+          "placeholder": "Senior Sales Manager Contact",
+          "maxLength": "10",
+          "min": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691651146499",
+          "value": "SeniorSalesManagerContact",
+          "FieldName": "Phone",
+          "label": "Senior Sales Manager Contact",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-17125577110128": {
+          "id": "item-1712557902178",
+          "type": "number",
+          "placeholder": "Planned Centre Billable Seats",
+          "required": false,
+          "duplicated": false,
+          "name": "item-17125577110128",
+          "value": "PlannedCentreBillableSeats",
+          "FieldName": "Number",
+          "label": "Planned Centre Billable Seats",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712500130128": {
+          "id": "item-17125579200978",
+          "type": "number",
+          "placeholder": "Actual Centre Billable Seats",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712500130128",
+          "value": "ActualCentreBillableSeats",
+          "FieldName": "Number",
+          "label": "Actual Centre Billable Seats",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557945708": {
+          "id": "item-1712546324978",
+          "type": "number",
+          "placeholder": "Centre Carpet Area (Sqft)",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557945708",
+          "value": "CentreCarpetAreaSqft",
+          "FieldName": "Number",
+          "label": "Centre Carpet Area (Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712302430128": {
+          "id": "item-1712301124978",
+          "type": "number",
+          "placeholder": "Centre Built-up Area (Sqft)",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712302430128",
+          "value": "CentreBuiltupAreaSqft",
+          "FieldName": "Number",
+          "label": "Centre Built-up Area (Sqft)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557940428": {
+          "id": "item-1712552114978",
+          "type": "number",
+          "placeholder": "Master Unit Billable Seats",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557940428",
+          "value": "MasterUnitBillableSeats",
+          "FieldName": "Number",
+          "label": "Master Unit Billable Seats",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-17125579303128": {
+          "id": "item-1712504324978",
+          "type": "number",
+          "placeholder": "Actual Unit Billable Seats",
+          "required": false,
+          "duplicated": false,
+          "name": "item-17125579303128",
+          "value": "ActualUnitBillableSeats",
+          "FieldName": "Number",
+          "label": "Actual Unit Billable Seats",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-17125579303211": {
+          "id": "item-17125043192978",
+          "type": "number",
+          "placeholder": "Master Plan Seat Cost",
+          "required": false,
+          "duplicated": false,
+          "name": "item-17125579303211",
+          "value": "MasterPlanSeatCost",
+          "FieldName": "Currency",
+          "label": "Master Plan Seat Cost",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-17125579293828": {
+          "id": "item-1712201324978",
+          "type": "number",
+          "placeholder": "Approved Centre Topline",
+          "required": false,
+          "duplicated": false,
+          "name": "item-17125579293828",
+          "value": "ApprovedCentreTopline",
+          "FieldName": "Currency",
+          "label": "Approved Centre Topline",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-17125592113128": {
+          "id": "item-1712504920978",
+          "type": "number",
+          "placeholder": "Quoted Seat Cost",
+          "required": false,
+          "duplicated": false,
+          "name": "item-17125592113128",
+          "value": "QuotedSeatCost",
+          "FieldName": "Currency",
+          "label": "Quoted Seat Cost",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557940228": {
+          "id": "item-171255162978",
+          "type": "number",
+          "placeholder": "Open Desks",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557940228",
+          "value": "OpenDesks",
+          "FieldName": "Number",
+          "label": "Open Desks",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712553546128": {
+          "id": "item-171255465768978",
+          "type": "number",
+          "placeholder": "Manager Cabin (Seats)",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712553546128",
+          "value": "ManagerCabinSeats",
+          "FieldName": "Number",
+          "label": "Manager Cabin (Seats)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1689748021629": {
+          "id": "item-16897401143537",
+          "type": "date",
+          "placeholder": "Centre Lease Agreement Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748021629",
+          "value": "CentreLeaseAgreementDate",
+          "FieldName": "Date",
+          "label": "Centre Lease Agreement Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-16897482147629": {
+          "id": "item-1689748891137",
+          "type": "date",
+          "placeholder": "Centre Fit-out Start Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-16897482147629",
+          "value": "CentreFitoutStartDate",
+          "FieldName": "Date",
+          "label": "Centre Fit-out Start Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689748829929": {
+          "id": "item-1689711843537",
+          "type": "date",
+          "placeholder": "Centre Lock-in Expiry Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748829929",
+          "value": "CentreLockinExpiryDate",
+          "FieldName": "Date",
+          "label": "Centre Lock-in Expiry Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689748891029": {
+          "id": "item-16897001843537",
+          "type": "date",
+          "placeholder": "Centre Go-live Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1689748891029",
+          "value": "CentreGoliveDate",
+          "FieldName": "Date",
+          "label": "Centre Go-live Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1689749354099": {
+          "name": "item-1689749354099",
+          "type": "text",
+          "placeholder": "Floor",
+          "id": "SingleLine",
+          "value": "Floor",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Floor",
+          "remove": true
+        },
+        "item-1712827447775": {
+          "id": "item-1712827447775",
+          "type": "Multiselect",
+          "placeholder": "Multiselect",
+          "duplicated": false,
+          "name": "item-1712827447775",
+          "value": "Amenities",
+          "options": [
+            {
+              "label": "24/7 Security",
+              "value": "24/7 Security"
+            },
+            {
+              "label": "Printing Facility",
+              "value": "Printing Facility"
+            },
+            {
+              "label": "Passenger Lifts",
+              "value": "Passenger Lifts"
+            },
+            {
+              "label": "24/7 Office Access",
+              "value": "24/7 Office Access"
+            },
+            {
+              "label": "Cafeteria",
+              "value": "Cafeteria"
+            },
+            {
+              "label": "Server Room",
+              "value": "Server Room"
+            },
+            {
+              "label": "Window Coverings",
+              "value": "Window Coverings"
+            },
+            {
+              "label": "Support Staff",
+              "value": "Support Staff"
+            },
+            {
+              "label": "Managed Reception",
+              "value": "Managed Reception"
+            },
+            {
+              "label": "Prime Locations",
+              "value": "Prime Locations"
+            },
+            {
+              "label": "WIFI",
+              "value": "WIFI"
+            },
+            {
+              "label": "Drinking Water",
+              "value": "Drinking Water"
+            },
+            {
+              "label": "Cubicle",
+              "value": "Cubicle"
+            },
+            {
+              "label": "Conference Room",
+              "value": "Conference Room"
+            },
+            {
+              "label": "Beverages",
+              "value": "Beverages"
+            },
+            {
+              "label": "CCTV Surveillance",
+              "value": "CCTV Surveillance"
+            },
+            {
+              "label": "Car Parking",
+              "value": "Car Parking"
+            },
+            {
+              "label": "Bike Parking",
+              "value": "Bike Parking"
+            },
+            {
+              "label": "Meeting Room",
+              "value": "Meeting Room"
+            },
+            {
+              "label": "Air Conditioning",
+              "value": "Air Conditioning"
+            }
+          ],
+          "required": false,
+          "FieldName": "Multiselect",
+          "label": "Amenities",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1692001439249": {
+          "id": "item-1692001321749",
+          "type": "Select",
+          "placeholder": "Brand Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692001439249",
+          "value": "BrandName",
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "Brand Name",
+              "value": "Brand Name"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Brand Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-16924321480749": {
+          "id": "item-1692000879140",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "City",
+          "value": "City",
+          "options": [
+            {
+              "label": "Pune",
+              "value": "Pune"
+            },
+            {
+              "label": "Mumbai",
+              "value": "Mumbai"
+            },
+            {
+              "label": "Hyderabad",
+              "value": "Hyderabad"
+            },
+            {
+              "label": "Chennai",
+              "value": "Chennai"
+            },
+            {
+              "label": "Bengaluru",
+              "value": "Bengaluru"
+            },
+            {
+              "label": "Ahmedabad",
+              "value": "Ahmedabad"
+            },
+            {
+              "label": "Navi Mumbai",
+              "value": "Navi Mumbai"
+            },
+            {
+              "label": "Thane",
+              "value": "Thane"
+            },
+            {
+              "label": "New Delhi",
+              "value": "New Delhi"
+            },
+            {
+              "label": "Noida",
+              "value": "Noida"
+            },
+            {
+              "label": "Gurugram",
+              "value": "Gurugram"
+            },
+            {
+              "label": "Ghaziabad",
+              "value": "Ghaziabad"
+            },
+            {
+              "label": "Faridabad",
+              "value": "Faridabad"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-16920014214749": {
+          "id": "item-1692382480749",
+          "type": "Select",
+          "placeholder": "Holding Company",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-16920014214749",
+          "value": "HoldingCompany",
+          "options": [
+            {
+              "label": "A",
+              "value": "A"
+            },
+            {
+              "label": "B",
+              "value": "B"
+            },
+            {
+              "label": "C",
+              "value": "C"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Holding Company",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-169113903622494": {
+          "id": "item-1691139271494",
+          "type": "number",
+          "placeholder": "Unit Status",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-169113903622494",
+          "value": "Unit Status",
+          "FieldName": "Single Line",
+          "label": "Unit Status",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-169113939910494": {
+          "id": "item-16911321001494",
+          "type": "date",
+          "placeholder": "Agreement Date",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-169113939910494",
+          "value": "AgreementDate",
+          "FieldName": "Date",
+          "label": "Agreement Date",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-169113903210494": {
+          "id": "item-16911332001494",
+          "type": "number",
+          "placeholder": "Monthly Rent",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-169113903210494",
+          "value": "Monthly Rent",
+          "FieldName": "Number",
+          "label": "Monthly Rent",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-160883903210494": {
+          "id": "item-16911332111494",
+          "type": "number",
+          "placeholder": "Tenure (Months)",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-160883903210494",
+          "value": "TenureMonths",
+          "FieldName": "Number",
+          "label": "Tenure (Months)",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Lease details",
+      "inputs": {
+        "item-1691139350143": {
+          "id": "item-1691157150143",
+          "type": "number",
+          "placeholder": "Security Deposit",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691139350143",
+          "value": "SecurityDeposit",
+          "FieldName": "Number",
+          "label": "Security Deposit",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691139050141": {
+          "id": "item-1691139650143",
+          "type": "number",
+          "placeholder": "Tenure",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691139050141",
+          "value": "Tenure",
+          "FieldName": "Number",
+          "label": "Tenure",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691139050144": {
+          "id": "item-1692139050143",
+          "type": "number",
+          "placeholder": "Lockin",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691139050144",
+          "value": "Lockin",
+          "FieldName": "Number",
+          "label": "Lockin",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691139050149": {
+          "id": "item-1691769050143",
+          "type": "number",
+          "placeholder": "Notice Period",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691139050149",
+          "value": "NoticePeriod",
+          "FieldName": "Number",
+          "label": "Notice Period",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691139050142": {
+          "id": "item-1691139540143",
+          "type": "number",
+          "placeholder": "Master Plan Seat Cost",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691139050142",
+          "value": "MasterPlanSeatCost ",
+          "FieldName": "Number",
+          "label": "Master Plan Seat Cost",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information",
+      "inputs": {
+        "item-1691686897936": {
+          "id": "item-1691686821136",
+          "type": "textarea",
+          "placeholder": "Description",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691686897936",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "formTitle": "Quotes",
+  "sections": [
+    {
+      "formTitle": "Quotes Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner",
+          "remove": true
+        },
+        "item-1697452828120": {
+          "name": "item-1697452828120",
+          "type": "text",
+          "placeholder": "Subject",
+          "id": "SingleLine",
+          "value": "Subject",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Subject"
+        },
+        "item-1692875114522": {
+          "id": "item-1692875114522",
+          "type": "Lookup",
+          "placeholder": "Company Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875114522",
+          "value": "CompanyName",
+          "lookupModule": "accounts",
+          "relatedListTitle": "Related List Name 1",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "Company Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1692874300533": {
+          "id": "item-169249924533",
+          "type": "Lookup",
+          "placeholder": "Opportunity Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692874300533",
+          "value": "OpportunityName",
+          "lookupModule": "deals",
+          "relatedListTitle": "Related List Name 1",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Opportunity Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1692875429533": {
+          "id": "item-1692870314533",
+          "type": "Lookup",
+          "placeholder": "Contact Name",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1692875429533",
+          "value": "ContactName",
+          "lookupModule": "contacts",
+          "relatedListTitle": "Related List Name 1",
+          "required": false,
+          "FieldName": "Lookup",
+          "label": "Contact Name",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-1691686725011": {
+          "id": "item-16916867200311",
+          "type": "Select",
+          "placeholder": "Quote Stage",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-1691686725011",
+          "value": "QuoteStage",
+          "options": [
+            {
+              "label": "Mail Confirmation",
+              "value": "Mail Confirmation"
+            },
+            {
+              "label": "Quote Signed",
+              "value": "Quote Signed"
+            },
+            {
+              "label": "Token recieved",
+              "value": "Token recieved"
+            },
+            {
+              "label": "On Hold",
+              "value": "On Hold"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Quote Stage",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697452828121": {
+          "name": "item-1697452828120",
+          "type": "text",
+          "placeholder": "Payee Name",
+          "id": "SingleLine",
+          "value": "PayeeName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Single Line",
+          "label": "Payee Name"
+        },
+        "item-168974854268012": {
+          "id": "item-168974853333012",
+          "type": "date",
+          "placeholder": "Quote Date",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-168974854268012",
+          "value": "QuoteDate",
+          "FieldName": "Date",
+          "label": "Quote Date",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        },
+        "item-168974857998012": {
+          "id": "item-1689748784133012",
+          "type": "date",
+          "placeholder": "Valid Until",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-168974857998012",
+          "value": "ValidUntil",
+          "FieldName": "Date",
+          "label": "Valid Until",
+          "isNumberEncrypt": false,
+          "isUniq": false,
+          "remove": true
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information ",
+      "inputs": {
+        "item-1691686897936": {
+          "id": "item-1691686888626",
+          "type": "textarea",
+          "placeholder": "MultiLine",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691686897936",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557873882": {
+          "id": "item-1712557867480",
+          "type": "text",
+          "placeholder": "Locality",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557873882",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Quoted items",
+      "inputs": [
+        {
+          "item-169118805014324": {
+            "id": "item-169113392014324",
+            "type": "number",
+            "placeholder": "Sr.No.",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-169118805014324",
+            "value": "SrNo",
+            "FieldName": "Number",
+            "label": "Sr.No.",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050125": {
+            "id": "item-169113905214325",
+            "type": "Lookup",
+            "placeholder": "Unit Inventory Name",
+            "maxLength": "255",
+            "duplicated": false,
+            "name": "item-1691139050125",
+            "value": "InventoryName",
+            "lookupModule": "inventory",
+            "relatedListTitle": "Related List Name 1",
+            "required": false,
+            "FieldName": "Lookup",
+            "label": "Unit Inventory Name",
+            "isNumberEncrypt": false,
+            "isUniq": false,
+            "remove": true
+          },
+          "item-1691139050141": {
+            "id": "item-1691209050143",
+            "type": "number",
+            "placeholder": "Open Desk",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050141",
+            "value": "OpenDesk",
+            "FieldName": "Number",
+            "label": "Open Desk",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050142": {
+            "id": "item-1699876050143",
+            "type": "number",
+            "placeholder": "Manager Cabin",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050142",
+            "value": "ManagerCabin",
+            "FieldName": "Number",
+            "label": "Manager Cabin",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050145": {
+            "id": "item-1691669050143",
+            "type": "number",
+            "placeholder": "Sold Unit Billable Seats",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050145",
+            "value": "SoldUnit",
+            "FieldName": "Number",
+            "label": "Sold Unit Billable Seats",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050146": {
+            "id": "item-1691130150143",
+            "type": "number",
+            "placeholder": "Agreed Seat Rate",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050146",
+            "value": "AgreedSeatRate",
+            "FieldName": "Currency",
+            "label": "Agreed Seat rate",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050148": {
+            "id": "item-1691186050143",
+            "type": "number",
+            "placeholder": "Monthly Rent",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050148",
+            "value": "MonthlyRent",
+            "FieldName": "Number",
+            "label": "Monthly Rent",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          },
+          "item-1691139050147": {
+            "id": "item-1691130050143",
+            "type": "number",
+            "placeholder": "Brokerage Earned",
+            "maxLength": "100",
+            "required": false,
+            "duplicated": false,
+            "name": "item-1691139050147",
+            "value": "BrokerageEarned",
+            "FieldName": "Currency",
+            "label": "Brokerage Earned",
+            "isNumberEncrypt": false,
+            "isUniq": false
+          }
+        }
+      ]
+    }
+  ]
+}

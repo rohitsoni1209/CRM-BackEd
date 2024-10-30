@@ -1,0 +1,305 @@
+{
+  "formTitle": "channelPartner",
+  "sections": [
+    {
+      "formTitle": "Channel Partner Information",
+      "inputs": {
+        "Owner": {
+          "name": "Owner",
+          "type": "Owner",
+          "placeholder": "owner",
+          "id": "Owner",
+          "value": "Owner",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": false,
+          "FieldName": "Owner",
+          "label": "Owner"
+        },
+        "item-1697452828120": {
+          "name": "item-1697452828120",
+          "type": "text",
+          "placeholder": "Channel Partner Name",
+          "id": "SingleLine",
+          "value": "ChannelPartnerName",
+          "maxLength": "255",
+          "duplicated": false,
+          "required": true,
+          "FieldName": "Single Line",
+          "label": "Channel Partner Name"
+        },
+        "item-1697452859215": {
+          "id": "item-1697452848159",
+          "type": "email",
+          "placeholder": "Email",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1697452859215",
+          "value": "Email",
+          "FieldName": "Email",
+          "label": "Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697452890195": {
+          "id": "item-1697452841556",
+          "type": "email",
+          "placeholder": "Email",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1697452890195",
+          "value": "SecondaryEmail",
+          "FieldName": "Email",
+          "label": "Secondary Email",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697452876463": {
+          "id": "item-1697452866656",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1697452876463",
+          "value": "Mobile",
+          "FieldName": "Phone",
+          "label": "Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697452893562": {
+          "id": "item-1697452887924",
+          "type": "number",
+          "placeholder": "Phone",
+          "maxLength": "10",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1697452893562",
+          "value": "SecondaryMobile",
+          "FieldName": "Phone",
+          "label": "Secondary Mobile",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "PreferredCity": {
+          "id": "item-1697452947304",
+          "type": "Select",
+          "placeholder": "Pick List",
+          "duplicated": false,
+          "name": "Preferred City",
+          "value": "PreferredCity",
+          "options": [
+            {
+              "label": "Pune",
+              "value": "Pune"
+            },
+            {
+              "label": "Mumbai",
+              "value": "Mumbai"
+            },
+            {
+              "label": "Hyderabad",
+              "value": "Hyderabad"
+            },
+            {
+              "label": "Chennai",
+              "value": "Chennai"
+            },
+            {
+              "label": "Bengaluru",
+              "value": "Bengaluru"
+            },
+            {
+              "label": "Ahmedabad",
+              "value": "Ahmedabad"
+            },
+            {
+              "label": "Navi Mumbai",
+              "value": "Navi Mumbai"
+            },
+            {
+              "label": "Thane",
+              "value": "Thane"
+            },
+            {
+              "label": "New Delhi",
+              "value": "New Delhi"
+            },
+            {
+              "label": "Noida",
+              "value": "Noida"
+            },
+            {
+              "label": "Gurugram",
+              "value": "Gurugram"
+            },
+            {
+              "label": "Ghaziabad",
+              "value": "Ghaziabad"
+            },
+            {
+              "label": "Faridabad",
+              "value": "Faridabad"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "Preferred City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697453021154": {
+          "id": "item-1697453014028",
+          "type": "text",
+          "placeholder": "SingleLine",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1697453021154",
+          "value": "Locality",
+          "FieldName": "Single Line",
+          "label": "Locality",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1697453040437": {
+          "id": "item-1697453040437",
+          "type": "Lookup",
+          "placeholder": "CP Company Name",
+          "duplicated": false,
+          "name": "item-1697453040437",
+          "value": "CPCompanyName",
+          "lookupModule": "Accounts",
+          "relatedListTitle": "Company",
+          "required": true,
+          "FieldName": "Lookup",
+          "label": "CP Company Name",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-16897592908190": {
+          "id": "item-168975922218190",
+          "type": "Select",
+          "placeholder": "CP Follow Up",
+          "maxLength": "255",
+          "duplicated": false,
+          "name": "item-16897592908190",
+          "value": "CPFollowUp",
+          "options": [
+            {
+              "label": "Open",
+              "value": "Open"
+            },
+            {
+              "label": "Attempted to Contact",
+              "value": "Attempted to Contact"
+            },
+            {
+              "label": "Contacted",
+              "value": "Contacted"
+            },
+            {
+              "label": "Inactive",
+              "value": "Inactive"
+            }
+          ],
+          "required": false,
+          "FieldName": "Pick List",
+          "label": "CP Follow Up",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Description Information",
+      "inputs": {
+        "item-1691740270407": {
+          "id": "item-1691740259980",
+          "type": "textarea",
+          "placeholder": "Description",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691740270407",
+          "value": "Description",
+          "FieldName": "Multi Line",
+          "label": "Description",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    },
+    {
+      "formTitle": "Address Information",
+      "inputs": {
+        "item-1712557915700": {
+          "id": "item-1712557909998",
+          "type": "text",
+          "placeholder": "Country",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557915700",
+          "value": "Country",
+          "FieldName": "Single Line",
+          "label": "Country",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557906490": {
+          "id": "item-1712557901381",
+          "type": "text",
+          "placeholder": "State",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557906490",
+          "value": "State",
+          "FieldName": "Single Line",
+          "label": "State",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1691687462802": {
+          "id": "item-1691687456441",
+          "type": "text",
+          "placeholder": "City",
+          "maxLength": "255",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1691687462802",
+          "value": "City",
+          "FieldName": "Single Line",
+          "label": "City",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557888348": {
+          "id": "item-1712557879347",
+          "type": "text",
+          "placeholder": "Micro Market",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557888348",
+          "value": "MicroMarket",
+          "FieldName": "Single Line",
+          "label": "Micro Market",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        },
+        "item-1712557930128": {
+          "id": "item-1712557924978",
+          "type": "number",
+          "placeholder": "Pincode",
+          "required": false,
+          "duplicated": false,
+          "name": "item-1712557930128",
+          "value": "Pincode",
+          "FieldName": "Number",
+          "label": "Pincode",
+          "isNumberEncrypt": false,
+          "isUniq": false
+        }
+      }
+    }
+  ]
+}
