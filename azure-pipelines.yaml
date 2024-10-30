@@ -88,7 +88,7 @@ steps:
     runOptions: 'commands'
     commands: |
       docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
-      docker run -d --name app_container -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+      docker run -d --name crm_bknd -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
 
 - task: HawkScanInstall@1
   inputs:
