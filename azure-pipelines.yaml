@@ -41,8 +41,8 @@ steps:
     uploadReports: true
     warnOnCVSSViolation: true
     enableExperimental: true
-    enableRetired: true
-
+    nvdApiKey: '66ead14b-79d0-48e5-a3cb-8f0f0aa40bda'
+    localInstallPath: '.'
 - task: SonarCloudPrepare@3
   inputs:
     SonarCloud: 'sonar-connection'
