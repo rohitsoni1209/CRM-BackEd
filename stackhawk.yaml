@@ -1,4 +1,25 @@
+# -- stackhawk configuration for crmbknd --
 app:
-  applicationId: a48a46f2-22b1-4aa2-99f2-dfcd1470bc07
-  host: https://crm.bknd.cloudnexus.site
-  env: Development
+  # -- An applicationId obtained from the StackHawk platform. --
+  applicationId: ac0833ce-23aa-45e7-8e7f-a6d266538e2f # (required)
+  # -- The environment for the applicationId defined in the StackHawk platform. --
+  env: Development # (required)
+  # -- The url of your application to scan --
+  host: https://crm.bknd.cloudnexus.site # (required)
+
+
+# -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
+  # openApiConf:
+  #   path: /swagger.json # OR...
+#       filePath: openApi.json
+  # autoPolicy: true
+  # autoInputVectors: true
+  # Configuration Docs: https://docs.stackhawk.com/hawkscan/configuration/
+
+# -- If Authenticated Scanning is needed, add here --
+  # Authenticated Scanning Docs: https://docs.stackhawk.com/hawkscan/authenticated-scanning.html
+  # Authenticated Scanning Repo: https://github.com/kaakaww/scan-configuration/tree/main/Authentication
+
+# -- Help Section --
+  # Docs: https://docs.stackhawk.com/
+  # Contact Support: support@stackhawk.com
