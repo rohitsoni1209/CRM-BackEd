@@ -24,7 +24,7 @@ app.use(expressWinston.logger({
 // Swagger API Docs
 app.use("/api-docs", swaggerServe, swaggerSetup);
 // Body-parser
-app.use(cors({ origin: 'https://inventory.cloudnexus.site' }));
+app.use(cors({ origin: '*' }));
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 app.use(express.json({ limit: '100mb' }));
