@@ -40,9 +40,18 @@ steps:
     format: 'XML, HTML'
     uploadReports: true
     warnOnCVSSViolation: true
-    enableExperimental: false
+    enableExperimental: true
     nvdApiKey: '66ead14b-79d0-48e5-a3cb-8f0f0aa40bda'
     localInstallPath: '.'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/dependency-check-report.xml'  # Adjust this path to your report location
+    failTaskOnFailedTests: false
+    testRunTitle: 'Dependency Check Report'
+
+  
 - task: SonarCloudPrepare@3
   inputs:
     SonarCloud: 'sonar-connection'
