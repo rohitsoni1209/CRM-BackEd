@@ -1,0 +1,4 @@
+app:
+  applicationId: a48a46f2-22b1-4aa2-99f2-dfcd1470bc07
+  host: https://crm.bknd.cloudnexus.site
+  env: Development
