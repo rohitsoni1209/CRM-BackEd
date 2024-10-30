@@ -32,25 +32,6 @@ steps:
     reportFormat: 'html'
     reportFile: '$(Build.ArtifactStagingDirectory)/snyk-app-report.html'
   displayName: 'Run Snyk App Scan'
-
-- task: dependency-check-build-task@6
-  inputs:
-    projectName: 'crm'
-    scanPath: '*.json'
-    format: 'XML, HTML'
-    uploadReports: true
-    warnOnCVSSViolation: true
-    enableExperimental: true
-    nvdApiKey: '66ead14b-79d0-48e5-a3cb-8f0f0aa40bda'
-    localInstallPath: '.'
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)/TestResults/dependency-check/dependency-check-report.xml'  # Relative path to the report
-    failTaskOnFailedTests: true
-    testRunTitle: 'Dependency Check Report'
-
   
 - task: SonarCloudPrepare@3
   inputs:
@@ -75,4 +56,59 @@ steps:
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
     tags: '$(Build.BuildNumber)'
+
+- task: CmdLine@2
+  displayName: Install Trivy
+  inputs:
+    script: |
+      TRIVY_VERSION=$(curl -s https://api.github.com/repos/aquasecurity/trivy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")' | sed 's/^v//')
+      wget https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+      tar xzf trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+      rm trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+      sudo mv trivy /usr/local/bin/
+      trivy -v
+
+- task: CmdLine@2
+  displayName: 'Run Trivy scan on image'
+  inputs:
+    script: |
+      wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/junit.tpl -O junit.tpl
+      trivy image application321.azurecr.io/crmrepo:$(Build.BuildNumber) --db-repository "ghcr.io/aquasecurity/trivy-db:2","public.ecr.aws/aquasecurity/trivy-db" --format template --template "@./junit.tpl" --output $(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml
+
+- task: PublishTestResults@2
+  displayName: 'Publish Trivy App Image Scan Results'
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '$(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml'
+    failTaskOnFailedTests: false
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'deploy'
+    runOptions: 'commands'
+    commands: |
+      docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+      docker run -d --name app_container -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+
+- task: HawkScanInstall@1
+  inputs:
+    version: latest
+    installerType: 'auto'
+
+- script: |
+    java -version
+  displayName: 'Check Java Version'
+
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkSourceOption: 'PreInstalled'
+    jdkArchitectureOption: 'x64'
+    
+- task: RunHawkScan@1
+  inputs:
+    configFile: "stackhawk.yml"
+    version: "latest"
+  env:
+    HAWK_API_KEY: $(hawk_api_key)
 
