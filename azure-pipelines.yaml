@@ -36,11 +36,11 @@ steps:
 - task: dependency-check-build-task@6
   inputs:
     projectName: 'crm'
-    scanPath: 'package.json'
+    scanPath: '*.json'
     format: 'XML, HTML'
     uploadReports: true
     warnOnCVSSViolation: true
-    enableExperimental: true
+    enableExperimental: false
     nvdApiKey: '66ead14b-79d0-48e5-a3cb-8f0f0aa40bda'
     localInstallPath: '.'
 - task: SonarCloudPrepare@3
