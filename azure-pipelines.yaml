@@ -6,49 +6,49 @@ pool:
 
 steps:
 
-- task: NodeTool@0
-  inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
+# - task: NodeTool@0
+#   inputs:
+#     versionSpec: '20.x'
+#   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-  displayName: 'npm install and build'
+# - script: |
+#     npm install
+#   displayName: 'npm install and build'
 
-- script: |
-    echo "This is a placeholder step; no changes are made."
-  displayName: 'No-op step'
+# - script: |
+#     echo "This is a placeholder step; no changes are made."
+#   displayName: 'No-op step'
 
-# Snyk Security Scan for Application Dependencies
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'snykoattacko'
-    testType: 'app'
-    targetFile: 'package.json'
-    monitorWhen: 'always'
-    failOnIssues: false
-    projectName: 'calculator-project/Backend'
-    organization: 'f6ff1f1e-b60e-43aa-91ab-fad13fbc3519'
-    reportFormat: 'html'
-    reportFile: '$(Build.ArtifactStagingDirectory)/snyk-app-report.html'
-  displayName: 'Run Snyk App Scan'
+# # Snyk Security Scan for Application Dependencies
+# - task: SnykSecurityScan@1
+#   inputs:
+#     serviceConnectionEndpoint: 'snykoattacko'
+#     testType: 'app'
+#     targetFile: 'package.json'
+#     monitorWhen: 'always'
+#     failOnIssues: false
+#     projectName: 'calculator-project/Backend'
+#     organization: 'f6ff1f1e-b60e-43aa-91ab-fad13fbc3519'
+#     reportFormat: 'html'
+#     reportFile: '$(Build.ArtifactStagingDirectory)/snyk-app-report.html'
+#   displayName: 'Run Snyk App Scan'
   
-- task: SonarCloudPrepare@3
-  inputs:
-    SonarCloud: 'sonar-connection'
-    organization: 'demodevopsyl'
-    scannerMode: 'cli'
-    cliScannerVersion: '6.2.1.4610'
-    configMode: 'manual'
-    cliProjectKey: 'davidputra2812_CRM-Backend'
-    cliProjectName: 'CRM Backend'
-    cliSources: '.'
+# - task: SonarCloudPrepare@3
+#   inputs:
+#     SonarCloud: 'sonar-connection'
+#     organization: 'demodevopsyl'
+#     scannerMode: 'cli'
+#     cliScannerVersion: '6.2.1.4610'
+#     configMode: 'manual'
+#     cliProjectKey: 'davidputra2812_CRM-Backend'
+#     cliProjectName: 'CRM Backend'
+#     cliSources: '.'
 
-- task: SonarCloudAnalyze@3
+# - task: SonarCloudAnalyze@3
 
-- task: SonarCloudPublish@3
-  inputs:
-    pollingTimeoutSec: '300'
+# - task: SonarCloudPublish@3
+#   inputs:
+#     pollingTimeoutSec: '300'
 - task: Docker@2
   inputs:
     containerRegistry: 'docker'
