@@ -47,10 +47,9 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'TestResults/dependency-check/dependency-check-report.xml'  # Relative path to the report
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/TestResults/dependency-check/dependency-check-report.xml'  # Relative path to the report
     failTaskOnFailedTests: true
     testRunTitle: 'Dependency Check Report'
-  workingDirectory: '$(System.DefaultWorkingDirectory)'  
 
   
 - task: SonarCloudPrepare@3
