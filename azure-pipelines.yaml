@@ -160,8 +160,11 @@ steps:
       git commit -m "Update image tag to ${image_sha} from crm_backend"
       echo "Changes committed in GitOps repository."
 
-      # Push the changes to the correct branch in GitOps
-      git push origin $(Build.SourceBranch):$(Build.SourceBranch)
+      # Get the current branch name
+      current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+  # Push changes to the current branch
+      git push origin $current_branch
     fi
   displayName: 'Update image tag in GitOps deployment.yaml and push changes'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
