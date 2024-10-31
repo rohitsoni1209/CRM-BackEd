@@ -121,14 +121,14 @@ steps:
     ls -la
 
     # Verify that the file exists
-    if [ ! -f crypto/deployment.yaml ]; then
-      echo "Error: crypto/deployment.yaml does not exist."
+    if [ ! -f crm_backend/deployment.yaml ]; then
+      echo "Error: crm_backend/deployment.yaml does not exist."
       exit 1
     fi
 
     # Update the image tag in deployment.yaml with the latest commit SHA
     latest_sha=$(git rev-parse --short HEAD)
-    sed -i "s|image: application321.azurecr.io/application321:.*|image: application321.azurecr.io/crmrepo:${latest_sha}|" crm_backend/deployment.yaml
+    sed -i "s|image: application321.azurecr.io/crmrepo:.*|image: application321.azurecr.io/crmrepo@sha256:${latest_sha}|" crm_backend/deployment.yaml
 
     echo "Updated deployment.yaml with new image tag using SHA: ${latest_sha}"
 
