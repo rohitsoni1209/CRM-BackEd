@@ -1,7 +1,7 @@
 # -- stackhawk configuration for crmbknd --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: ac0833ce-23aa-45e7-8e7f-a6d266538e2f # (required)
+  applicationId: a48a46f2-22b1-4aa2-99f2-dfcd1470bc07 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
