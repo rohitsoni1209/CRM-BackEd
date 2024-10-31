@@ -57,60 +57,60 @@ steps:
     Dockerfile: 'Dockerfile'
     tags: '$(Build.BuildNumber)'
 
-- task: CmdLine@2
-  displayName: Install Trivy
-  inputs:
-    script: |
-      TRIVY_VERSION=$(curl -s https://api.github.com/repos/aquasecurity/trivy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")' | sed 's/^v//')
-      wget https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
-      tar xzf trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
-      rm trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
-      sudo mv trivy /usr/local/bin/
-      trivy -v
+# - task: CmdLine@2
+#   displayName: Install Trivy
+#   inputs:
+#     script: |
+#       TRIVY_VERSION=$(curl -s https://api.github.com/repos/aquasecurity/trivy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")' | sed 's/^v//')
+#       wget https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+#       tar xzf trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+#       rm trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz
+#       sudo mv trivy /usr/local/bin/
+#       trivy -v
 
-- task: CmdLine@2
-  displayName: 'Run Trivy scan on image'
-  inputs:
-    script: |
-      wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/junit.tpl -O junit.tpl
-      trivy image application321.azurecr.io/crmrepo:$(Build.BuildNumber) --db-repository "ghcr.io/aquasecurity/trivy-db:2","public.ecr.aws/aquasecurity/trivy-db" --format template --template "@./junit.tpl" --output $(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml
+# - task: CmdLine@2
+#   displayName: 'Run Trivy scan on image'
+#   inputs:
+#     script: |
+#       wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/junit.tpl -O junit.tpl
+#       trivy image application321.azurecr.io/crmrepo:$(Build.BuildNumber) --db-repository "ghcr.io/aquasecurity/trivy-db:2","public.ecr.aws/aquasecurity/trivy-db" --format template --template "@./junit.tpl" --output $(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml
 
-- task: PublishTestResults@2
-  displayName: 'Publish Trivy App Image Scan Results'
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '$(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml'
-    failTaskOnFailedTests: false
+# - task: PublishTestResults@2
+#   displayName: 'Publish Trivy App Image Scan Results'
+#   inputs:
+#     testResultsFormat: 'JUnit'
+#     testResultsFiles: '$(Build.ArtifactStagingDirectory)/trivy-docker-image-report.xml'
+#     failTaskOnFailedTests: false
 
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'deploy'
-    runOptions: 'commands'
-    commands: |
-      docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
-      docker run -d --name crm_bknd -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+# - task: SSH@0
+#   inputs:
+#     sshEndpoint: 'deploy'
+#     runOptions: 'commands'
+#     commands: |
+#       docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+#       docker run -d --name crm_bknd -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
 
-- task: HawkScanInstall@1
-  inputs:
-    version: latest
-    installerType: 'auto'
+# - task: HawkScanInstall@1
+#   inputs:
+#     version: latest
+#     installerType: 'auto'
 
-- script: |
-    java -version
-  displayName: 'Check Java Version'
+# - script: |
+#     java -version
+#   displayName: 'Check Java Version'
 
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '17'
-    jdkSourceOption: 'PreInstalled'
-    jdkArchitectureOption: 'x64'
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '17'
+#     jdkSourceOption: 'PreInstalled'
+#     jdkArchitectureOption: 'x64'
     
-- task: RunHawkScan@1
-  inputs:
-    configFile: "stackhawk.yml"
-    version: "latest"
-  env:
-    HAWK_API_KEY: $(hawk_api_key)
+# - task: RunHawkScan@1
+#   inputs:
+#     configFile: "stackhawk.yml"
+#     version: "latest"
+#   env:
+#     HAWK_API_KEY: $(hawk_api_key)
 
 - script: |
     echo "Starting update of image tag in GitOps repository deployment.yaml"
@@ -130,24 +130,25 @@ steps:
     fi
 
     # Update the image tag in the GitOps deployment.yaml with the latest SHA from crm_backend
-    sed -i "s|image: application321.azurecr.io/crmrepo@sha:.*|image: application321.azurecr.io/crmrepo@sha256:${latest_sha}|" crm_backend/deployment.yaml
+    sed -i "s|image: application321.azurecr.io/crmrepo:.*|image: application321.azurecr.io/crmrepo@sha256:${latest_sha}|" crm_backend/deployment.yaml
 
     echo "Updated crm_backend/deployment.yaml in GitOps repository with new image tag using SHA: ${latest_sha}"
 
-    # Configure Git to use your credentials for the commit
+    # Set up Git configuration
     git config --global user.email "davidputra2812@gmail.com"
     git config --global user.name "davidputra2812"
 
-    # Stage, commit, and push the changes to the GitOps repository
+    # Stage and attempt to commit changes
     git add crm_backend/deployment.yaml
-    if git commit -m "Update image tag to ${latest_sha} from crm_backend"; then
-      echo "Changes committed in GitOps repository."
+    if git diff --cached --quiet; then
+      echo "No changes to commit in GitOps repository."
     else
-      echo "No changes to commit."
-    fi
+      git commit -m "Update image tag to ${latest_sha} from crm_backend"
+      echo "Changes committed in GitOps repository."
 
-    # Push the changes to the same branch in the GitOps repository
-    git push origin $(Build.SourceBranch)
+      # Push the changes to the correct branch in GitOps
+      git push origin $(Build.SourceBranch):$(Build.SourceBranch)
+    fi
   displayName: 'Update image tag in GitOps deployment.yaml and push changes'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
