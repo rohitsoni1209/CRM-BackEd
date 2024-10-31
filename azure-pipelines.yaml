@@ -141,7 +141,7 @@ steps:
     cat crm_backend/deployment.yaml
 
     # Update the image tag in the GitOps deployment.yaml with the latest SHA from the image
-    sed -i "s|image: application321.azurecr.io/crmrepo:.*|image: application321.azurecr.io/crmrepo@sha256:${image_sha}|" crm_backend/deployment.yaml
+    sed -i "s|image: application321.azurecr.io/crmrepo@sha:*|image: application321.azurecr.io/crmrepo@sha256:${image_sha}|" crm_backend/deployment.yaml
 
     echo "Contents of deployment.yaml after update:"
     cat crm_backend/deployment.yaml
