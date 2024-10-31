@@ -119,6 +119,18 @@ steps:
     latest_sha=$(git rev-parse --short HEAD)
     echo "Latest commit SHA from crm_backend repository: ${latest_sha}"
 
+    # Retrieve the image SHA256 digest from ACR
+    image_digest=$(az acr repository show-manifests --name application321 \
+        --repository crmrepo \
+        --query "[?tags[?contains(@, '${{ variables['Build.BuildNumber'] }}')]].digest | [0]" --output tsv)
+
+    if [ -z "$image_digest" ]; then
+      echo "Error: Unable to retrieve image digest from ACR."
+      exit 1
+    fi
+
+    echo "Latest image digest from ACR: ${image_digest}"
+
     # Clone the GitOps repository
     git clone https://$(AccessToken)@dev.azure.com/davidputra2812/calculator-project/_git/GitOps
     cd GitOps
@@ -129,10 +141,10 @@ steps:
       exit 1
     fi
 
-    # Update the image tag in the GitOps deployment.yaml with the latest SHA from crm_backend
-    sed -i "s|image: application321.azurecr.io/crmrepo:.*|image: application321.azurecr.io/crmrepo@sha256:${latest_sha}|" crm_backend/deployment.yaml
+    # Update the image tag in the GitOps deployment.yaml with the latest SHA from ACR
+    sed -i "s|image: application321.azurecr.io/crmrepo@sha256:.*|image: application321.azurecr.io/crmrepo@sha256:${image_digest}|" crm_backend/deployment.yaml
 
-    echo "Updated crm_backend/deployment.yaml in GitOps repository with new image tag using SHA: ${latest_sha}"
+    echo "Updated crm_backend/deployment.yaml in GitOps repository with new image tag using digest: ${image_digest}"
 
     # Set up Git configuration
     git config --global user.email "davidputra2812@gmail.com"
@@ -143,7 +155,7 @@ steps:
     if git diff --cached --quiet; then
       echo "No changes to commit in GitOps repository."
     else
-      git commit -m "Update image tag to ${latest_sha} from crm_backend"
+      git commit -m "Update image tag to sha256:${image_digest} from crm_backend"
       echo "Changes committed in GitOps repository."
 
       # Push the changes to the correct branch in GitOps
@@ -151,6 +163,7 @@ steps:
     fi
   displayName: 'Update image tag in GitOps deployment.yaml and push changes'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+
 
 
 
