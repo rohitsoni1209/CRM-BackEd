@@ -130,6 +130,7 @@ steps:
     # Clone the GitOps repository
     git clone https://$(AccessToken)@dev.azure.com/davidputra2812/calculator-project/_git/GitOps
     cd GitOps
+    git checkout maain
 
     # Verify that the target deployment.yaml file exists
     if [ ! -f crm_backend/deployment.yaml ]; then
@@ -152,6 +153,8 @@ steps:
     git config --global user.email "davidputra2812@gmail.com"
     git config --global user.name "davidputra2812"
 
+
+
     # Stage and attempt to commit changes
     git add crm_backend/deployment.yaml
     if git diff --cached --quiet; then
@@ -160,11 +163,8 @@ steps:
       git commit -m "Update image tag to ${image_sha} from crm_backend"
       echo "Changes committed in GitOps repository."
 
-      # Get the current branch name
-      current_branch=$(git rev-parse --abbrev-ref HEAD)
-
-  # Push changes to the current branch
-      git push origin $current_branch
+      # Push the changes to the correct branch in GitOps
+      git push origin main
     fi
   displayName: 'Update image tag in GitOps deployment.yaml and push changes'
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
