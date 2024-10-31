@@ -113,19 +113,20 @@ steps:
 #     HAWK_API_KEY: $(hawk_api_key)
 
 - script: |
-    echo "Retrieving the SHA of the newly pushed image..."
+    echo "Starting update of image tag in GitOps repository deployment.yaml"
 
-    # Get the SHA of the last pushed image
-    image_sha=$(docker inspect --format='{{index .RepoDigests 0}}' application321.azurecr.io/crmrepo:$(Build.BuildNumber) | cut -d'@' -f2)
-    
-    if [ -z "$image_sha" ]; then
-      echo "Error: Unable to retrieve the SHA for the image."
+    # Capture the latest commit SHA from the current (crm_backend) repository
+    latest_sha=$(git rev-parse --short HEAD)
+    echo "Latest commit SHA from crm_backend repository: ${latest_sha}"
+
+    # Retrieve the SHA256 digest from the build task's output
+    image_digest=$(echo "$(BuildAndPush.Output)" | grep -oP 'digest: sha256:\K\w+')
+    if [ -z "$image_digest" ]; then
+      echo "Error: Unable to retrieve image digest."
       exit 1
     fi
 
-    echo "Latest image SHA: ${image_sha}"
-
-    echo "Starting update of image tag in GitOps repository deployment.yaml"
+    echo "Latest image digest from ACR: ${image_digest}"
 
     # Clone the GitOps repository
     git clone https://$(AccessToken)@dev.azure.com/davidputra2812/calculator-project/_git/GitOps
@@ -137,10 +138,10 @@ steps:
       exit 1
     fi
 
-    # Update the image tag in the GitOps deployment.yaml with the latest SHA from the image
-    sed -i "s|image: application321.azurecr.io/crmrepo@sha:.*|image: application321.azurecr.io/crmrepo@sha256:${image_sha}|" crm_backend/deployment.yaml
+    # Update the image tag in the GitOps deployment.yaml with the latest SHA from ACR
+    sed -i "s|image: application321.azurecr.io/crmrepo@sha256:.*|image: application321.azurecr.io/crmrepo@sha256:${image_digest}|" crm_backend/deployment.yaml
 
-    echo "Updated crm_backend/deployment.yaml in GitOps repository with new image tag using SHA: ${image_sha}"
+    echo "Updated crm_backend/deployment.yaml in GitOps repository with new image tag using digest: ${image_digest}"
 
     # Set up Git configuration
     git config --global user.email "davidputra2812@gmail.com"
@@ -151,7 +152,7 @@ steps:
     if git diff --cached --quiet; then
       echo "No changes to commit in GitOps repository."
     else
-      git commit -m "Update image tag to ${image_sha} from crm_backend"
+      git commit -m "Update image tag to sha256:${image_digest} from crm_backend"
       echo "Changes committed in GitOps repository."
 
       # Push the changes to the correct branch in GitOps
