@@ -112,3 +112,48 @@ steps:
   env:
     HAWK_API_KEY: $(hawk_api_key)
 
+- script: |
+    echo "Updating image tag in deployment.yaml in GitOps repository"
+
+    # Print current directory for debugging
+    pwd
+    echo "Listing files in the current directory:"
+    ls -la
+
+    # Verify that the file exists
+    if [ ! -f crm_backend/deployment.yaml ]; then
+      echo "Error: crm_backend/deployment.yaml does not exist."
+      exit 1
+    fi
+
+    # Update the image tag in deployment.yaml with the latest commit SHA
+    latest_sha=$(git rev-parse --short HEAD)
+    sed -i "s|image: application321.azurecr.io/crmrepo:.*|image: application321.azurecr.io/crmrepo@sha256:${latest_sha}|" crm_backend/deployment.yaml
+
+    echo "Updated deployment.yaml with new image tag using SHA: ${latest_sha}"
+
+    # Set up Git configuration
+    git config --global user.email "davidputra2812@gmail.com"
+    git config --global user.name "davidputra2812"
+
+    # Fetch the latest changes from the remote
+    git fetch origin
+
+    # Checkout the branch where the PR was created
+    echo "Checking out the branch $(Build.SourceBranch)"
+    git checkout $(Build.SourceBranch)
+
+    # Stage and commit changes
+    git add crypto/deployment.yaml
+    if git commit -m "Update image tag to ${latest_sha}"; then
+      echo "Changes committed."
+    else
+      echo "No changes to commit."
+    fi
+
+    # Push changes to the specified GitOps repository using the access token
+    git push https://$(AccessToken)@dev.azure.com/davidputra2812/calculator-project/_git/GitOps HEAD:$(Build.SourceBranch)
+  displayName: 'Update image tag in deployment.yaml and push changes to GitOps repo'
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+
+
