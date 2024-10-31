@@ -5,7 +5,7 @@ FROM node:20.11.0-alpine
 WORKDIR /app
 
 # Copy only package.json and package-lock.json for dependency installation
-COPY package.json package-lock.json ./
+COPY . .
 
 # Install dependencies
 RUN npm install --production
