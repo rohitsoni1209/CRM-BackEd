@@ -12,8 +12,8 @@ app:
     loggedOutIndicator: ".*Location:.*/crm/Login.*"
     usernamePassword:  
       type: FORM
-      loginPath: /login
-      loginPagePath: /crm/login
+      loginPath: **/login
+      loginPagePath: **/login
       usernameField: username
       passwordField: password
       scanUsername: "v@gmail.com"
