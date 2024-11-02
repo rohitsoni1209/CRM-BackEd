@@ -49,13 +49,13 @@ steps:
 # - task: SonarCloudPublish@3
 #   inputs:
 #     pollingTimeoutSec: '300'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'docker'
-    repository: 'crmrepo'
-    command: 'buildAndPush'
-    Dockerfile: 'Dockerfile'
-    tags: '$(Build.BuildNumber)'
+# - task: Docker@2
+#   inputs:
+#     containerRegistry: 'docker'
+#     repository: 'crmrepo'
+#     command: 'buildAndPush'
+#     Dockerfile: 'Dockerfile'
+#     tags: '$(Build.BuildNumber)'
 
 # - task: CmdLine@2
 #   displayName: Install Trivy
@@ -90,27 +90,27 @@ steps:
 #       docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
 #       docker run -d --name crm_bknd -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
 
-# - task: HawkScanInstall@1
-#   inputs:
-#     version: latest
-#     installerType: 'auto'
+- task: HawkScanInstall@1
+  inputs:
+    version: latest
+    installerType: 'auto'
 
-# - script: |
-#     java -version
-#   displayName: 'Check Java Version'
+- script: |
+    java -version
+  displayName: 'Check Java Version'
 
-# - task: JavaToolInstaller@0
-#   inputs:
-#     versionSpec: '17'
-#     jdkSourceOption: 'PreInstalled'
-#     jdkArchitectureOption: 'x64'
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkSourceOption: 'PreInstalled'
+    jdkArchitectureOption: 'x64'
     
-# - task: RunHawkScan@1
-#   inputs:
-#     configFile: "stackhawk.yml"
-#     version: "latest"
-#   env:
-#     HAWK_API_KEY: $(hawk_api_key)
+- task: RunHawkScan@1
+  inputs:
+    configFile: "stackhawk.yml"
+    version: "latest"
+  env:
+    HAWK_API_KEY: $(hawk_api_key)
 
 - script: |
     echo "Retrieving the SHA of the newly pushed image..."
