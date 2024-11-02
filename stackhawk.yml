@@ -26,7 +26,7 @@ app:
       success: ".*200.*"
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
-  openApiConf:
+  swaggerConf:
     path: api.yaml # OR...
       filePath: api.yaml
   autoPolicy: true
