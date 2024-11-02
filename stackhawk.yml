@@ -20,14 +20,14 @@ app:
       scanPassword: "321Atpug@"
     cookieAuthorization:
       cookiesNames: 
-           "JSESSIONID"
+        - "JSESSIONID"
     testPath:
       path: /crm/login #Change me
       success: ".*200.*"
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
-   openApiConf:
-   # path: ./api.yaml # OR...
+  openApiConf:
     filePath: ./api.yaml
+
   autoPolicy: true
   autoInputVectors: true
