@@ -27,7 +27,7 @@ app:
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
   swaggerConf:
-    path: api.yaml # OR...
-      filePath: api.yaml
+    path: ./api.yaml # OR...
+      filePath: ./api.yaml
   autoPolicy: true
   autoInputVectors: true
