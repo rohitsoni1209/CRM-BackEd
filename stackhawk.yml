@@ -7,19 +7,27 @@ app:
   # -- The url of your application to scan --
   host: https://crm.bknd.cloudnexus.site # (required)
 
+  authentication: 
+    loggedInIndicator: "\\QSign Out\\E"
+    loggedOutIndicator: ".*Location:.*/crm/Login.*"
+    usernamePassword:  
+      type: FORM
+      loginPath: https://crm.test.cloudnexus.site/crm/login
+      loginPagePath: https://crm.test.cloudnexus.site/crm/login
+      usernameField: username
+      passwordField: password
+      scanUsername: "v@gmail.com"
+      scanPassword: "321Atpug@"
+    cookieAuthorization:
+      cookiesNames: 
+           "JSESSIONID"
+    testPath:
+      path: /crm/login #Change me
+      success: ".*200.*"
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
-  # openApiConf:
-  #   path: /swagger.json # OR...
-#       filePath: openApi.json
-  # autoPolicy: true
-  # autoInputVectors: true
-  # Configuration Docs: https://docs.stackhawk.com/hawkscan/configuration/
-
-# -- If Authenticated Scanning is needed, add here --
-  # Authenticated Scanning Docs: https://docs.stackhawk.com/hawkscan/authenticated-scanning.html
-  # Authenticated Scanning Repo: https://github.com/kaakaww/scan-configuration/tree/main/Authentication
-
-# -- Help Section --
-  # Docs: https://docs.stackhawk.com/
-  # Contact Support: support@stackhawk.com
+  openApiConf:
+    path: api.yaml # OR...
+      filePath: api.yaml
+  autoPolicy: true
+  autoInputVectors: true
