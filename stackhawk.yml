@@ -12,8 +12,8 @@ app:
     loggedOutIndicator: ".*Location:.*/crm/Login.*"
     usernamePassword:  
       type: FORM
-      loginPath: https://crm.test.cloudnexus.site/crm/login
-      loginPagePath: https://crm.test.cloudnexus.site/crm/login
+      loginPath: /login
+      loginPagePath: /crm/login
       usernameField: username
       passwordField: password
       scanUsername: "v@gmail.com"
