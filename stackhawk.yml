@@ -25,12 +25,6 @@ app:
   #     path: /crm/login # Change me
   #     success: ".*200.*"
 
-  # -- MongoDB Configuration --
-  database:
-    type: mongodb
-    uri: 'mongodb+srv://vicky:stackmentalist@cluster0.qu0vs.mongodb.net/crm?retryWrites=true&w=majority&appName=Cluster0'
-    # If using authentication, replace <username> and <password> with actual MongoDB credentials.
-    # Replace <mongodb_host>, <mongodb_port>, and <database_name> with the relevant MongoDB connection details.
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
   openApiConf:
@@ -38,3 +32,8 @@ app:
 
   autoPolicy: true
   autoInputVectors: true
+
+database:
+  type: mongodb
+  uri: 'mongodb+srv://vicky:stackmentalist@cluster0.qu0vs.mongodb.net/crm?retryWrites=true&w=majority&appName=Cluster0'
+    
