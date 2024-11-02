@@ -26,8 +26,8 @@ app:
       success: ".*200.*"
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
-  swaggerConf:
-    path: ./api.yaml # OR...
+   openApiConf:
+   # path: ./api.yaml # OR...
     filePath: ./api.yaml
   autoPolicy: true
   autoInputVectors: true
