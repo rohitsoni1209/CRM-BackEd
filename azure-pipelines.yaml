@@ -237,7 +237,7 @@ steps:
           "markdown": true
         }
       ]
-    }' $(webkhook)
+    }' $(passwebkhook)
   displayName: 'Send Teams Failure Notification'
   condition: failed()
 
