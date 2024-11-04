@@ -88,6 +88,7 @@ steps:
     runOptions: 'commands'
     commands: |
       docker pull application321.azurecr.io/crmrepo:$(Build.BuildNumber)
+      docker rm -f crm_bknd
       docker run -d --name crm_bknd -p 1711:1711 application321.azurecr.io/crmrepo:$(Build.BuildNumber)
   condition: eq(variables['Build.Reason'], 'PullRequest')
 
