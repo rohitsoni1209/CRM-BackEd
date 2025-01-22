@@ -1,49 +1,46 @@
-name: Deploy to ECR
+name: VAPT Workflow
 
 on:
   push:
-    branches: [ Test ]
+    branches: [ master ]
 
 jobs:
-  build:
-    name: Build and Push Image to ECR
+  vapt:
+    name: Vulnerability Assessment and Penetration Testing
     runs-on: ubuntu-latest
 
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-    
-    - name: Set up AWS CLI
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id : ASIARHJJMYY424X6YXYM
-        aws-secret-access-key: eZ+cFCOTaU7ljWCtA4LSDTdvAFFY29XxBwbgi1/B
-        aws-session-token : IQoJb3JpZ2luX2VjEFgaCmV1LW5vcnRoLTEiRzBFAiEA2s9HJ0YiRL5uAXNG4iXKzubZmQ6w+1wPz/++nEd4Q0kCIBsG/tiHtpKb1unSkupwKZ3RnngX90HCfo24m8R29UKKKoADCML//////////wEQABoMMDg0Mzc1NTUzNTkzIgxXCbiE2RyJIp7RUXMq1AIH3NE/SUPHZRbh5JOxB0DaF9Aepndqw7N+bIPuNUiuv4X2gtakCnafaK2geyUflTEyNghSNixGSHn+fAh1DqGyIXgUBrsCus4NdSYSs7u6xkGREh6wINsOsMJZXToYqqZGHD4CRIYZ3OuejxXSCofldPpFTIQuz7FiNf8LScXIBgxQeY8s/RC/kkTwgiQ7smDkZQZTeOWceMIgd8TcNtGcznRCDbfcHTuryfVvyAB0jL5+oFDAvnTIaPbGqDAZj2lG6pSyAAKsU3UIVnsC81Mc3Q7eRmX1PYjtdzgxM8KbXfIZU6MrVsR4aZ9xdCwV99wMHprQtvb9aB0rMLzO9asOhAbKTmZlroM7gttmUt99Vmk0XXsIUFfukCBatbbFXK4QMKTBgy6yBbnLOqRTIBXRODu9Ol38r+me7lV7n0Yat5chU33dR7qW0r56gyBrCbFhYFXOMPDN5LgGOqcBlo2sKNKNlwztLnrpIa44xWJmscrkq3O20LhZeHxyKnlg+ETgc9qxs8PCy3fy8KhFVYlo05CaSmLrmp7FCCoYX/ne7wNJDG0iOdlIYMkubdmTGnKbSgBw/bgNTFeA/5Ag+FRnVuF4HF5j5OjVyQN9NK8v/kjFHtSxPzvYxl2Cwajbhtj3hjg7ab+u1dfx7YUuJ9JJxZ+bqGhBZg+EkIR2hEIEz0gxHZU=
-        aws-region: eu-north-1
-    - name: Authenticate Docker to ECR
-      run: |
-        aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 084375553593.dkr.ecr.eu-north-1.amazonaws.com
 
-    - name: Build Docker image
+    - name: Run Code Review with CodeClimate
+      env:
+        CC_REPORTER_ID: ${{ secrets.CC_REPORTER_ID }}
       run: |
-        docker build -t crm-backend .
+        echo "Running Code Review with CodeClimate..."
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
+        ./cc-test-reporter after-build --exit-code $?
+        
+    - name: Run GitLeaks
+      run: |
+        echo "Scanning for secrets with GitLeaks..."
+        docker run --rm --name=gitleaks --volume $(pwd):/code zricethezav/gitleaks:latest detect --source=/code
 
-    - name: Tag Docker image
+    - name: Run Talisman
       run: |
-        docker tag crm-backend:latest 084375553593.dkr.ecr.eu-north-1.amazonaws.com/crm-backend:latest
+        echo "Running Talisman for security checks..."
+        npm install -g talisman
+        talisman --scan
 
-    - name: Push Docker image to ECR
+    - name: Run SonarQube Analysis
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        docker push 084375553593.dkr.ecr.eu-north-1.amazonaws.com/crm-backend:latest
-
-    - name: Deploy to EC2
-      run: |
-        echo "${{ secrets.TEST1 }}" > crm.pem
-        chmod 600 crm.pem
-        ssh -o StrictHostKeyChecking=no -i crm.pem ubuntu@ec2-13-51-212-186.eu-north-1.compute.amazonaws.com << 'EOF'
-          
-          aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 084375553593.dkr.ecr.eu-north-1.amazonaws.com
-          docker stop crm-backend || true
-          docker rm crm-backend || true
-          docker run -d --name crm-backend -p 1711:1711 084375553593.dkr.ecr.eu-north-1.amazonaws.com/crm-backend:latest
-        EOF
+        echo "Running static analysis with SonarQube..."
+        sonar-scanner \
+          -Dsonar.projectKey=my_project_key \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=https://sonarqube.example.com \
+          -Dsonar.login=$SONAR_TOKEN
